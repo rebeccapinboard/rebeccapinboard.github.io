@@ -49,6 +49,7 @@ h1 span { color: var(--coral); font-style: italic; white-space: nowrap; }
 #map { height: 490px; background: #e7eee6; z-index: 0; }
 .map-tip { position: absolute; top: 27px; left: 27px; z-index: 500; background: rgba(255, 254, 250, .96); border: 1px solid #deddd5; box-shadow: 0 4px 18px #38463616; padding: 10px 13px; font-size: 10px; font-weight: 700; letter-spacing: .02em; color: #4f5b52; display: flex; align-items: center; gap: 8px; pointer-events: none; }
 .tip-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--coral); }
+.tip-touch { display: none; }
 .map-error { max-width: 300px; padding: 80px 20px; margin: auto; text-align: center; line-height: 1.6; color: var(--muted); }
 .leaflet-control-attribution { font-size: 10px !important; }
 .leaflet-control-zoom a { color: var(--ink) !important; }
@@ -131,4 +132,9 @@ h1 span { color: var(--coral); font-style: italic; white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+@media (pointer: coarse) {
+  .tip-desktop { display: none; }
+  .tip-touch { display: inline; }
 }

@@ -111,7 +111,7 @@
     return;
   }
 
-  map = L.map("map", { scrollWheelZoom: false, zoomControl: false, worldCopyJump: true }).setView([20, 30], 2);
+  map = L.map("map", { scrollWheelZoom: true, touchZoom: true, zoomControl: false, worldCopyJump: true }).setView([20, 30], 2);
   L.control.zoom({ position: "bottomright" }).addTo(map);
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 18,

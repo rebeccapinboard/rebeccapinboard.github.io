@@ -30,7 +30,7 @@
 
   function initializeMap() {
     if (map || !window.L) return;
-    map = L.map("editor-map", { scrollWheelZoom: false }).setView([20, 30], 2);
+    map = L.map("editor-map", { scrollWheelZoom: true, touchZoom: true }).setView([20, 30], 2);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
