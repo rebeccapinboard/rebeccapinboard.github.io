@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Edit the Pinboard · Rebecca's Pinboard</title>
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+    <script defer src="vendor/leaflet/leaflet.js"></script>
+    <script defer src="config.js"></script>
+    <script defer src="db.js"></script>
+    <script defer src="admin.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">✳</span><span>rebecca's <em>pinboard</em></span></a>
+        <a class="back-link" href="index.html">← View the map</a>
+      </header>
+      <main class="admin-main">
+        <div class="admin-heading"><span class="eyebrow">THE EDITOR</span><h1>Make it <span>yours.</span></h1><p>Add a pin, write a memory, and upload the photos that belong to it.</p></div>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+
+        <section id="setup-panel" class="admin-card" hidden>
+          <h2>Connect the photo library</h2>
+          <p>The editor needs a Supabase project before it can save pins and photos. Follow the setup steps in <code>README.md</code>, then fill in <code>config.js</code>.</p>
+        </section>
+
+        <section id="login-panel" class="admin-card login-card" hidden>
+          <h2>Editor sign in</h2>
+          <p>Only the account added as an editor in Supabase can change the map.</p>
+          <form id="login-form">
+            <label>Email <input name="email" type="email" autocomplete="username" required /></label>
+            <label>Password <input name="password" type="password" autocomplete="current-password" required /></label>
+            <button class="primary-button" type="submit">Sign in</button>
+          </form>
+        </section>
+
+        <section id="editor-panel" hidden>
+          <div class="editor-toolbar"><span id="signed-in-as"></span><button id="sign-out" type="button" class="text-button">Sign out</button></div>
+          <div class="editor-grid">
+            <div class="editor-left">
+              <div class="admin-card">
+                <div class="card-heading"><h2>Your pins</h2><button id="new-place" type="button" class="small-button">+ New pin</button></div>
+                <div id="saved-list" class="saved-list"></div>
+              </div>
+              <div class="admin-card editor-map-card">
+                <div class="card-heading"><h2>Choose a location</h2></div>
+                <p>Click the map or search for an address. The location can be as broad or precise as you like.</p>
+                <form id="address-form" class="address-form"><label class="sr-only" for="address">Search address or place</label><input id="address" type="search" placeholder="Search a place or address" /><button type="submit" class="small-button">Find</button></form>
+                <div id="editor-map" aria-label="Map for choosing the location of a pin"></div>
+                <p class="map-credit">Address search uses <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> data. Search only when you need a location.</p>
+              </div>
+            </div>
+            <div class="admin-card edit-form-card">
+              <div class="card-heading"><h2 id="form-title">New pin</h2><span class="form-deco" aria-hidden="true">✳</span></div>
+              <form id="place-form">
+                <label>Place name <input name="name" type="text" maxlength="90" placeholder="e.g. Rome, Italy" required /></label>
+                <label>Country or region <input name="region" type="text" maxlength="90" placeholder="e.g. Italy" /></label>
+                <label>Your memory <textarea name="description" rows="5" maxlength="1200" placeholder="What do you remember about this place?"></textarea></label>
+                <div class="coordinate-fields"><label>Latitude <input name="latitude" type="number" min="-90" max="90" step="any" required /></label><label>Longitude <input name="longitude" type="number" min="-180" max="180" step="any" required /></label></div>
+                <label>Photos <input id="photo-files" name="photos" type="file" accept="image/*" multiple /><span class="field-hint">Choose several photos at once. They are resized before upload to keep the site fast.</span></label>
+                <div id="existing-photos" class="existing-photos"></div>
+                <div class="form-actions"><button type="submit" class="primary-button" id="save-place">Save pin</button><button type="button" id="delete-place" class="text-button danger" hidden>Delete pin</button></div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

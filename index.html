@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f4ec" />
+    <meta name="description" content="A travel pinboard for Rebecca's photos and memories." />
+    <title>Rebecca's Pinboard</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f7f4ec'/%3E%3Cpath d='M32 10c-12 0-21 9-21 21 0 15 21 27 21 27s21-12 21-27c0-12-9-21-21-21zm0 29a8 8 0 1 1 0-16 8 8 0 0 1 0 16z' fill='%23d46a50'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="vendor/leaflet/leaflet.js"></script>
+    <script defer src="config.js"></script>
+    <script defer src="db.js"></script>
+    <script defer src="places.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Rebecca's Pinboard, back to top">
+          <span class="brand-icon" aria-hidden="true">✳</span>
+          <span>rebecca's <em>pinboard</em></span>
+        </a>
+        <span class="header-note">a little map of big memories <span aria-hidden="true">↗</span></span>
+      </header>
+
+      <main id="top">
+        <section class="intro" aria-labelledby="page-title">
+          <div class="intro-copy">
+            <span class="eyebrow"><span class="eyebrow-line"></span> THE TRAVEL DIARY</span>
+            <h1 id="page-title">Every pin has <span>a story.</span></h1>
+            <p>Explore the places Rebecca has been, one memory at a time. Pick a pin on the map to open its photo album.</p>
+            <div class="intro-meta"><span class="meta-dot"></span> <span id="place-total">4 places to explore</span> <span class="meta-divider">/</span> made for sharing <span id="mode-indicator" class="mode-indicator">DEMO PREVIEW</span></div>
+          </div>
+          <div class="intro-stamp" aria-hidden="true"><span>WANDER</span><span>AND WONDER</span><span class="stamp-star">✦</span></div>
+        </section>
+
+        <section class="explorer" aria-label="Interactive travel map and photo album">
+          <div class="map-column">
+            <div class="section-heading">
+              <div><span class="section-kicker">01 / EXPLORE</span><h2>The places</h2></div>
+              <span class="section-aside">click a pin to look around <span aria-hidden="true">↘</span></span>
+            </div>
+            <div class="map-frame">
+              <div id="map" role="application" aria-label="Interactive map with pins for Italy, Switzerland, Australia, and China"></div>
+              <div class="map-tip"><span class="tip-dot"></span> Drag to explore · Scroll to zoom</div>
+            </div>
+            <div class="country-list" id="country-list" aria-label="Choose a country"></div>
+          </div>
+
+          <aside class="album" id="album" aria-live="polite" aria-labelledby="album-title">
+            <div class="album-topline"><span>02 / THE PHOTO ALBUM</span><span class="album-sparkle" aria-hidden="true">✦</span></div>
+            <div class="album-photo-wrap">
+              <img id="album-photo" class="album-photo" src="" alt="" />
+              <span class="photo-tag" id="photo-tag">SAMPLE PHOTO</span>
+            </div>
+            <div class="album-body">
+              <div class="album-location"><span class="location-pin" aria-hidden="true">●</span><span id="album-region"></span></div>
+              <h2 id="album-title"></h2>
+              <p id="album-description"></p>
+              <div class="album-bottom"><span id="photo-count"></span><span class="album-flower" aria-hidden="true">✻</span></div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="demo-note" aria-label="About this preview">
+          <span class="demo-icon" aria-hidden="true">✳</span>
+          <div><strong id="demo-note-title">A first look, ready for her stories.</strong><p id="demo-note-text">These are illustrative photos and country-level pins. Replace them with Rebecca's own pictures, exact locations, and captions before presenting.</p></div>
+        </section>
+      </main>
+
+      <footer class="site-footer"><span>Rebecca's Pinboard <span aria-hidden="true">✳</span></span><span>Made for all the places worth remembering.</span></footer>
+    </div>
+  </body>
+</html>
