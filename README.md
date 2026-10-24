@@ -1,6 +1,6 @@
 # Rebecca's Pinboard
 
-An interactive travel map for GitHub Pages. It currently shows four clearly labeled demo pins: Italy, Switzerland, Australia, and China. The photos in `images/` were AI-generated for the preview and are not Rebecca's travel photos.
+An interactive photography map for GitHub Pages. It currently shows five clearly labeled demo places: Italy, Switzerland, Australia, China, and Japan. The photos in `images/` were AI-generated for the preview and are not Rebecca's travel photos.
 
 ## Preview locally
 
@@ -14,7 +14,15 @@ Open `http://localhost:8000/`. The map needs an internet connection for Leaflet 
 
 ## Replace the demo content without an editor
 
-The sample pins live in `places.js`. Each place has a name, country or region, `[latitude, longitude]`, a caption, and a `photos` array. Put images in `images/` and add their paths to that array. You can add several photos to one pin; gallery arrows appear automatically.
+The sample places live in `places.js`. Each place has a name, region, `[latitude, longitude]`, an introduction, and a `photos` array. Put images in `images/` and add one entry per photo. Each photo can have `src`, `alt`, `title`, `location`, `coordinates`, and `description`. The description appears from the small **i** button on hover, click, or tap; use it for Rebecca's photography techniques and story. If a photo has coordinates, its pin appears on the country map. Without coordinates, the map shows the country's pin instead. Set `sample: false` on Rebecca's real photos so they do not carry a sample label.
+
+For example:
+
+```js
+{ src: "images/italy-street.webp", alt: "A street in Rome", title: "Afternoon light", location: "Rome, Italy", coordinates: [41.9028, 12.4964], description: "Rebecca's notes about framing, perspective, and light.", sample: false }
+```
+
+Country cards scroll sideways to show all five places. Selecting one opens a focused map and its photographs below the world map. Photos added to this repository are public on GitHub Pages, so only use images Rebecca is comfortable sharing publicly.
 
 ## Enable the on-site editor
 
@@ -27,7 +35,7 @@ The public site can stay on GitHub Pages. Supabase supplies the database, image 
 5. Under **Project Settings → API**, copy the **Project URL** and **publishable key** into `config.js`. Never put a secret key or `service_role` key in the website.
 6. Open `/admin.html` and sign in. Add a pin by clicking the map or searching an address, then choose photos and press **Save pin**.
 
-Once at least one pin is saved in Supabase, the public page loads those saved pins instead of the demo pins. To keep the four country pins, add Rebecca's real locations and photos for each through the editor. The editor also lets her update or remove pins and photos.
+Once at least one pin is saved in Supabase, the public page loads those saved pins instead of the demo pins. To keep the five country pins, add Rebecca's real locations and photos for each through the editor. The editor also lets her update or remove pins and photos. The current editor does not yet collect individual photo descriptions or locations; use `places.js` for those fields when Rebecca sends you her pictures.
 
 The editor resizes uploaded photos to WebP and removes embedded photo metadata. Photos on the public map are publicly accessible. The database and storage policies permit writes only by accounts listed in `editors`; the publishable key alone does not give write access.
 
