@@ -182,10 +182,23 @@
     return;
   }
 
-  const worldMap = L.map("map", { scrollWheelZoom: true, touchZoom: true, zoomControl: false, worldCopyJump: true }).setView([20, 30], 2);
+  const overview = byId("map");
+  const worldBounds = [[-85.0511, -180], [85.0511, 180]];
+  const minimumOverviewZoom = () => overview.clientWidth >= 800 ? 2 : 1;
+  const worldMap = L.map("map", {
+    scrollWheelZoom: true,
+    touchZoom: true,
+    zoomControl: false,
+    zoomSnap: 0.25,
+    minZoom: minimumOverviewZoom(),
+    maxBounds: worldBounds,
+    maxBoundsViscosity: 1
+  }).setView([20, 30], 2);
+  worldMap.on("resize", () => worldMap.setMinZoom(minimumOverviewZoom()));
   L.control.zoom({ position: "bottomright" }).addTo(worldMap);
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 18,
+    noWrap: true,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(worldMap);
 
@@ -226,6 +239,6 @@
 
   if (places.length) {
     const bounds = L.latLngBounds(places.map((place) => place.coordinates));
-    worldMap.fitBounds(bounds, { padding: [36, 36], maxZoom: 3 });
+    worldMap.fitBounds(bounds, { padding: [45, 45], maxZoom: 3 });
   }
 })();
