@@ -15,7 +15,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Open Sans', Arial, sans-serif; }
 button { font: inherit; }
 button:focus-visible, a:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
-.page-shell { width: min(100%, 1180px); margin: 0 auto; padding: 0 clamp(24px, 3.5vw, 48px); }
+.page-shell { width: min(100%, 1080px); margin: 0 auto; padding: 0 clamp(24px, 3.5vw, 48px); }
 .site-header { height: 90px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); gap: 20px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-family: 'Open Sans', Arial, sans-serif; font-size: 23px; font-weight: 700; letter-spacing: -.045em; white-space: nowrap; }
 .brand em { color: var(--coral); font-style: normal; }
