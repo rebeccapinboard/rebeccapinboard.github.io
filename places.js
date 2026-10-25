@@ -412,7 +412,7 @@ window.PLACES = [
       104.19
     ],
     "zoom": 5,
-    "description": "Layered Chongqing streets and a brief view from Shanghai, gathered from Rebecca's journey.",
+    "description": "Layered Chongqing streets and a brief view from Shanghai.",
     "photos": [
       {
         "src": "images/travel/china/07-chongqing-4-jpeg.webp",

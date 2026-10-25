@@ -15,7 +15,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Open Sans', Arial, sans-serif; }
 button { font: inherit; }
 button:focus-visible, a:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
-.page-shell { width: min(100%, 1080px); margin: 0 auto; padding: 0 clamp(24px, 3.5vw, 48px); }
+.page-shell { width: min(100%, 1060px); margin: 0 auto; padding: 0 clamp(24px, 3.5vw, 48px); }
 .site-header { height: 90px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); gap: 20px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-family: 'Open Sans', Arial, sans-serif; font-size: 23px; font-weight: 700; letter-spacing: -.045em; white-space: nowrap; }
 .brand em { color: var(--coral); font-style: normal; }
@@ -90,10 +90,10 @@ h1 span { color: var(--coral); font-style: italic; white-space: nowrap; }
 .photo-section-heading h3 { font-family: 'Open Sans', Arial, sans-serif; font-size: 30px; font-weight: 400; letter-spacing: -.04em; margin: 0; }
 .photo-section-heading span { color: var(--muted); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
 .photo-grid { columns: 2; column-gap: 24px; }
-.photo-grid--collage { columns: auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 142px; gap: 10px; }
+.photo-grid--collage { columns: auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 142px; grid-auto-flow: dense; gap: 10px; }
 .photo-card { width: 100%; min-width: 0; margin: 0 0 24px; display: inline-block; break-inside: avoid; background: #fffefa; border: 1px solid var(--line); vertical-align: top; }
 .photo-card--collage { height: 100%; margin: 0; border: 0; }
-.photo-card--collage:nth-child(6n + 2), .photo-card--collage:nth-child(6n + 5) { grid-row: span 2; }
+.photo-card--collage.is-portrait { grid-row: span 2; }
 .photo-card--collage .photo-card-media, .photo-card--collage img { width: 100%; height: 100%; }
 .photo-card--collage img { object-fit: cover; }
 .collage-open { position: absolute; inset: 0; width: 100%; border: 0; background: transparent; cursor: zoom-in; }

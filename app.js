@@ -92,6 +92,12 @@
       media.append(img);
 
       if (usesCollage) {
+        const setCollageShape = () => {
+          card.classList.toggle("is-portrait", img.naturalHeight > img.naturalWidth * 1.08);
+        };
+        if (img.complete) setCollageShape();
+        else img.addEventListener("load", setCollageShape, { once: true });
+
         const open = document.createElement("button");
         open.type = "button";
         open.className = "collage-open";
@@ -206,8 +212,12 @@
         popup.className = "map-photo-link";
         popup.textContent = `${label} · ${count} ${count === 1 ? "photo" : "photos"}`;
         popup.addEventListener("click", () => {
-          const index = place.photos.indexOf(photo);
-          document.getElementById(`photo-${place.id}-${index}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (place.name === "China" || place.name === "Japan") {
+            openLightbox(photo, place);
+          } else {
+            const index = place.photos.indexOf(photo);
+            document.getElementById(`photo-${place.id}-${index}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
         });
         L.marker(photo.coordinates, { icon, title: `${label}, ${count} photos`, alt: label, keyboard: true })
           .bindPopup(popup).addTo(detailMarkers);
