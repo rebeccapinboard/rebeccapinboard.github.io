@@ -558,45 +558,6 @@ window.PLACES = [
         "sample": false
       },
       {
-        "src": "images/travel/japan/02-nara-japan-kasugataisha-shrine3-jpeg.webp",
-        "alt": "I caught a deer pausing in a patch of sunlight beside the red shrine buildings at Kasuga Taisha in Nara.",
-        "title": "A sunlit pause",
-        "location": "Kasuga Taisha, Nara",
-        "locationId": "kasuga-taisha-nara",
-        "coordinates": [
-          34.6814,
-          135.8484
-        ],
-        "description": "I caught a deer pausing in a patch of sunlight beside the red shrine buildings at Kasuga Taisha in Nara. The vertical column balances the deer, and the contrast between warm architecture and shaded greenery gives the scene depth.",
-        "sample": false
-      },
-      {
-        "src": "images/travel/japan/03-nara-japan-kasugataisha-shrine2-jpeg.webp",
-        "alt": "I looked down the stone steps as a deer wandered between the old lanterns at Kasuga Taisha in Nara.",
-        "title": "Down the stone steps",
-        "location": "Kasuga Taisha, Nara",
-        "locationId": "kasuga-taisha-nara",
-        "coordinates": [
-          34.6814,
-          135.8484
-        ],
-        "description": "I looked down the stone steps as a deer wandered between the old lanterns at Kasuga Taisha in Nara. The descending path creates a strong diagonal, and the lanterns repeat through the frame to guide my eye toward the deer.",
-        "sample": false
-      },
-      {
-        "src": "images/travel/japan/04-nara-japan-kasugataisha-shrine1-jpeg.webp",
-        "alt": "I photographed a deer grazing beneath fiery autumn leaves near the red bridge at Kasuga Taisha in Nara.",
-        "title": "Autumn at Kasuga",
-        "location": "Kasuga Taisha, Nara",
-        "locationId": "kasuga-taisha-nara",
-        "coordinates": [
-          34.6814,
-          135.8484
-        ],
-        "description": "I photographed a deer grazing beneath fiery autumn leaves near the red bridge at Kasuga Taisha in Nara. The low deer anchors the foreground, while the bridge and glowing canopy layer warm colour across the scene.",
-        "sample": false
-      },
-      {
         "src": "images/travel/japan/30-nara-kasugataisha-shrine-jpeg.webp",
         "alt": "I photographed a deer grazing beside mossy stone lanterns at Kasuga Taisha in Nara.",
         "title": "Beside the lanterns",
@@ -698,6 +659,32 @@ window.PLACES = [
           136.948
         ],
         "description": "I photographed a quiet street corner in Kayaba, Nagoya, with apartments and overhead wires against a blue sky. The road curves into the scene, while the strong vertical buildings and utility pole describe the neighbourhood's everyday geometry.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/03-nara-japan-kasugataisha-shrine2-jpeg.webp",
+        "alt": "I looked down the stone steps as a deer wandered between the old lanterns at Kasuga Taisha in Nara.",
+        "title": "Down the stone steps",
+        "location": "Kasuga Taisha, Nara",
+        "locationId": "kasuga-taisha-nara",
+        "coordinates": [
+          34.6814,
+          135.8484
+        ],
+        "description": "I looked down the stone steps as a deer wandered between the old lanterns at Kasuga Taisha in Nara. The descending path creates a strong diagonal, and the lanterns repeat through the frame to guide my eye toward the deer.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/04-nara-japan-kasugataisha-shrine1-jpeg.webp",
+        "alt": "I photographed a deer grazing beneath fiery autumn leaves near the red bridge at Kasuga Taisha in Nara.",
+        "title": "Autumn at Kasuga",
+        "location": "Kasuga Taisha, Nara",
+        "locationId": "kasuga-taisha-nara",
+        "coordinates": [
+          34.6814,
+          135.8484
+        ],
+        "description": "I photographed a deer grazing beneath fiery autumn leaves near the red bridge at Kasuga Taisha in Nara. The low deer anchors the foreground, while the bridge and glowing canopy layer warm colour across the scene.",
         "sample": false
       }
     ]

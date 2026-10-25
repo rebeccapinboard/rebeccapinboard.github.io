@@ -60,8 +60,11 @@
       const card = document.createElement("article");
       card.className = "photo-card";
       card.id = `photo-${place.id}-${index}`;
-      const media = document.createElement("div");
+      const media = document.createElement("button");
       media.className = "photo-card-media";
+      media.type = "button";
+      media.setAttribute("aria-expanded", "false");
+      media.setAttribute("aria-label", `Open description for ${photo.title || photo.alt || place.name}`);
       const img = document.createElement("img");
       img.src = photo.src;
       img.alt = photo.alt || `Photograph ${index + 1} from ${place.name}`;
@@ -75,29 +78,32 @@
         media.append(tag);
       }
 
-      const notes = document.createElement("div");
-      notes.className = "photo-notes";
-      const trigger = document.createElement("button");
-      trigger.type = "button";
-      trigger.setAttribute("aria-label", `Photo description and techniques for ${photo.alt || place.name}`);
-      trigger.setAttribute("aria-expanded", "false");
-      trigger.title = "Photo description and techniques";
-      trigger.textContent = "i";
       const panel = document.createElement("div");
-      panel.className = "photo-notes-panel";
+      panel.className = "photo-description";
       panel.id = `photo-notes-${place.id}-${index}`;
-      trigger.setAttribute("aria-controls", panel.id);
+      panel.hidden = true;
+      media.setAttribute("aria-controls", panel.id);
       const label = document.createElement("strong");
       label.textContent = "About this photograph";
       const body = document.createElement("p");
       body.textContent = photo.description || "Rebecca's description and photography techniques will go here.";
-      panel.append(label, body);
-      notes.append(trigger, panel);
-      trigger.addEventListener("click", () => {
-        const open = notes.classList.toggle("is-open");
-        trigger.setAttribute("aria-expanded", String(open));
+      const close = document.createElement("button");
+      close.type = "button";
+      close.className = "photo-description-close";
+      close.textContent = "Close";
+      panel.append(label, body, close);
+
+      const setOpen = (open) => {
+        card.classList.toggle("is-open", open);
+        panel.hidden = !open;
+        media.setAttribute("aria-expanded", String(open));
+        media.setAttribute("aria-label", `${open ? "Close" : "Open"} description for ${photo.title || photo.alt || place.name}`);
+      };
+      media.addEventListener("click", () => setOpen(!card.classList.contains("is-open")));
+      close.addEventListener("click", () => {
+        setOpen(false);
+        media.focus();
       });
-      media.append(notes);
 
       const bodyWrap = document.createElement("div");
       bodyWrap.className = "photo-card-body";
@@ -116,7 +122,7 @@
       title.className = "photo-card-title";
       title.textContent = photo.title || `${place.name} · ${String(index + 1).padStart(2, "0")}`;
       bodyWrap.append(location, title);
-      card.append(media, bodyWrap);
+      card.append(media, panel, bodyWrap);
       photoGrid.append(card);
     });
   }
