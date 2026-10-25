@@ -15,7 +15,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Open Sans', Arial, sans-serif; }
 button { font: inherit; }
 button:focus-visible, a:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
-.page-shell { max-width: 1600px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 72px); }
+.page-shell { width: min(100%, 1280px); margin: 0 auto; padding: 0 clamp(24px, 4vw, 56px); }
 .site-header { height: 90px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); gap: 20px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-family: 'Open Sans', Arial, sans-serif; font-size: 23px; font-weight: 700; letter-spacing: -.045em; white-space: nowrap; }
 .brand em { color: var(--coral); font-style: normal; }
@@ -91,9 +91,11 @@ h1 span { color: var(--coral); font-style: italic; white-space: nowrap; }
 .photo-section-heading span { color: var(--muted); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
 .photo-grid { columns: 2; column-gap: 24px; }
 .photo-card { width: 100%; min-width: 0; margin: 0 0 24px; display: inline-block; break-inside: avoid; background: #fffefa; border: 1px solid var(--line); vertical-align: top; }
-.photo-card-media { position: relative; display: block; width: 100%; border: 0; padding: 0; overflow: hidden; background: #e8e6da; cursor: pointer; text-align: left; }
+.photo-card-media { position: relative; display: block; width: 100%; overflow: hidden; background: #e8e6da; }
 .photo-card-media img { display: block; width: 100%; height: auto; transition: filter .2s ease, transform .25s ease; }
-.photo-card-media:hover img, .photo-card-media:focus-visible img { filter: brightness(1.12); transform: scale(1.01); }
+.photo-card-media:hover img { filter: brightness(1.1); transform: scale(1.01); }
+.photo-info { position: absolute; top: 14px; right: 14px; width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid #c8d8df; border-radius: 50%; background: rgba(255, 254, 250, .95); color: var(--coral-dark); box-shadow: 0 3px 12px #252a2730; font-size: 20px; font-style: italic; font-weight: 700; cursor: pointer; }
+.photo-info:hover, .photo-info[aria-expanded="true"] { background: var(--coral-dark); color: white; }
 .sample-tag { position: absolute; bottom: 13px; left: 13px; background: #fffefa; color: var(--coral-dark); padding: 8px 10px; font-size: 9px; font-weight: 700; letter-spacing: .11em; }
 .photo-description { padding: 18px; color: var(--ink); background: #edf3f5; border-top: 1px solid #c8d8df; font-size: 13px; line-height: 1.65; }
 .photo-description strong { display: block; margin-bottom: 7px; color: var(--coral-dark); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }

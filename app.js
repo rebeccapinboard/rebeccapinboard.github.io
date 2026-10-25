@@ -60,16 +60,21 @@
       const card = document.createElement("article");
       card.className = "photo-card";
       card.id = `photo-${place.id}-${index}`;
-      const media = document.createElement("button");
+      const media = document.createElement("div");
       media.className = "photo-card-media";
-      media.type = "button";
-      media.setAttribute("aria-expanded", "false");
-      media.setAttribute("aria-label", `Open description for ${photo.title || photo.alt || place.name}`);
       const img = document.createElement("img");
       img.src = photo.src;
       img.alt = photo.alt || `Photograph ${index + 1} from ${place.name}`;
       img.loading = index < 2 ? "eager" : "lazy";
       media.append(img);
+
+      const trigger = document.createElement("button");
+      trigger.type = "button";
+      trigger.className = "photo-info";
+      trigger.textContent = "i";
+      trigger.setAttribute("aria-expanded", "false");
+      trigger.setAttribute("aria-label", `Open description for ${photo.title || photo.alt || place.name}`);
+      media.append(trigger);
 
       if (photo.sample !== false && isDemo) {
         const tag = document.createElement("span");
@@ -82,7 +87,7 @@
       panel.className = "photo-description";
       panel.id = `photo-notes-${place.id}-${index}`;
       panel.hidden = true;
-      media.setAttribute("aria-controls", panel.id);
+      trigger.setAttribute("aria-controls", panel.id);
       const label = document.createElement("strong");
       label.textContent = "About this photograph";
       const body = document.createElement("p");
@@ -96,13 +101,13 @@
       const setOpen = (open) => {
         card.classList.toggle("is-open", open);
         panel.hidden = !open;
-        media.setAttribute("aria-expanded", String(open));
-        media.setAttribute("aria-label", `${open ? "Close" : "Open"} description for ${photo.title || photo.alt || place.name}`);
+        trigger.setAttribute("aria-expanded", String(open));
+        trigger.setAttribute("aria-label", `${open ? "Close" : "Open"} description for ${photo.title || photo.alt || place.name}`);
       };
-      media.addEventListener("click", () => setOpen(!card.classList.contains("is-open")));
+      trigger.addEventListener("click", () => setOpen(!card.classList.contains("is-open")));
       close.addEventListener("click", () => {
         setOpen(false);
-        media.focus();
+        trigger.focus();
       });
 
       const bodyWrap = document.createElement("div");
@@ -183,7 +188,7 @@
     requestAnimationFrame(() => detailMap.invalidateSize());
   }
 
-  function openPlace(place) {
+  function openPlace(place, { scroll = true } = {}) {
     activePlace = place;
     byId("detail-title").textContent = place.name;
     byId("detail-region").textContent = place.region || "Travel photography";
@@ -192,7 +197,7 @@
     detail.hidden = false;
     refreshSelection();
     updateDetailMap(place);
-    detail.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (scroll) detail.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   places.forEach((place, index) => {
@@ -270,5 +275,6 @@
   if (places.length) {
     const bounds = L.latLngBounds(places.map((place) => place.coordinates));
     worldMap.fitBounds(bounds, { padding: [45, 45], maxZoom: 3 });
+    openPlace(places[0], { scroll: false });
   }
 })();
