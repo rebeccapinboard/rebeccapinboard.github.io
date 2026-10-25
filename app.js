@@ -33,127 +33,22 @@
   let detailMarkers = null;
   const worldMarkers = new Map();
   const intro = document.querySelector(".intro");
-  const geometryCanvas = byId("hero-geometry");
-
-  if (intro && geometryCanvas) {
-    const context = geometryCanvas.getContext("2d");
-    let pointer = null;
-
-    const drawGeometry = () => {
+  if (intro && window.matchMedia("(pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    intro.addEventListener("pointermove", (event) => {
       const bounds = intro.getBoundingClientRect();
-      const width = bounds.width;
-      const height = bounds.height;
-      const ratio = Math.min(window.devicePixelRatio || 1, 2);
-      const pixelWidth = Math.round(width * ratio);
-      const pixelHeight = Math.round(height * ratio);
-      if (geometryCanvas.width !== pixelWidth || geometryCanvas.height !== pixelHeight) {
-        geometryCanvas.width = pixelWidth;
-        geometryCanvas.height = pixelHeight;
-      }
-      context.setTransform(ratio, 0, 0, ratio, 0, 0);
-      context.clearRect(0, 0, width, height);
-
-      const points = [];
-      const pointCount = width < 700 ? 34 : 58;
-      const random = (seed) => {
-        const value = Math.sin(seed * 91.3458) * 47453.5453;
-        return value - Math.floor(value);
-      };
-      for (let index = 0; index < pointCount; index += 1) {
-        const baseX = random(index + 1) * width;
-        const baseY = random(index + 101) * height;
-        let pointX = baseX;
-        let pointY = baseY;
-        let influence = 0;
-        if (pointer) {
-          const deltaX = baseX - pointer.x;
-          const deltaY = baseY - pointer.y;
-          const distance = Math.hypot(deltaX, deltaY);
-          influence = Math.max(0, 1 - distance / 190);
-          if (distance > 0) {
-            pointX += (deltaX / distance) * influence * 28;
-            pointY += (deltaY / distance) * influence * 28;
-          }
-        }
-        points.push({ x: pointX, y: pointY, influence, polygon: index % 7 === 0 });
-      }
-      if (pointer) points.push({ x: pointer.x, y: pointer.y, influence: 1, cursor: true });
-
-      for (let first = 0; first < points.length; first += 1) {
-        for (let second = first + 1; second < points.length; second += 1) {
-          const a = points[first];
-          const b = points[second];
-          const distance = Math.hypot(a.x - b.x, a.y - b.y);
-          if (distance > 138) continue;
-          const strength = Math.max(a.influence, b.influence);
-          context.beginPath();
-          context.moveTo(a.x, a.y);
-          context.lineTo(b.x, b.y);
-          context.strokeStyle = `rgba(79, 120, 144, ${.065 + strength * .3})`;
-          context.lineWidth = .7 + strength * .8;
-          context.stroke();
-        }
-      }
-
-      points.forEach((point) => {
-        const radius = point.cursor ? 4 : point.polygon ? 6 + point.influence * 3 : 1.5 + point.influence * 2;
-        context.beginPath();
-        if (point.polygon) {
-          for (let side = 0; side < 6; side += 1) {
-            const angle = Math.PI / 3 * side - Math.PI / 2;
-            const x = point.x + Math.cos(angle) * radius;
-            const y = point.y + Math.sin(angle) * radius;
-            if (side === 0) context.moveTo(x, y);
-            else context.lineTo(x, y);
-          }
-          context.closePath();
-          context.strokeStyle = `rgba(49, 86, 109, ${.28 + point.influence * .58})`;
-          context.lineWidth = 1.2;
-          context.stroke();
-        } else {
-          context.arc(point.x, point.y, radius, 0, Math.PI * 2);
-          context.fillStyle = `rgba(49, 86, 109, ${.18 + point.influence * .65})`;
-          context.fill();
-        }
-      });
-
-      if (pointer) {
-        context.beginPath();
-        context.arc(pointer.x, pointer.y, 34, 0, Math.PI * 2);
-        context.strokeStyle = "rgba(79, 120, 144, .42)";
-        context.lineWidth = 1;
-        context.stroke();
-        context.beginPath();
-        context.arc(pointer.x, pointer.y, 4, 0, Math.PI * 2);
-        context.fillStyle = "rgba(49, 86, 109, .72)";
-        context.fill();
-      }
-    };
-
-    const canFollowPointer = window.matchMedia("(pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (canFollowPointer) {
-      intro.addEventListener("pointermove", (event) => {
-        const bounds = intro.getBoundingClientRect();
-        pointer = { x: event.clientX - bounds.left, y: event.clientY - bounds.top };
-        const shiftX = (pointer.x / bounds.width - .5) * 15;
-        const shiftY = (pointer.y / bounds.height - .5) * 12;
-        intro.style.setProperty("--pointer-x", `${shiftX}px`);
-        intro.style.setProperty("--pointer-y", `${shiftY}px`);
-        intro.style.setProperty("--pointer-x-reverse", `${shiftX * -.65}px`);
-        intro.style.setProperty("--pointer-y-reverse", `${shiftY * -.65}px`);
-        drawGeometry();
-      });
-      intro.addEventListener("pointerleave", () => {
-        pointer = null;
-        intro.style.setProperty("--pointer-x", "0px");
-        intro.style.setProperty("--pointer-y", "0px");
-        intro.style.setProperty("--pointer-x-reverse", "0px");
-        intro.style.setProperty("--pointer-y-reverse", "0px");
-        drawGeometry();
-      });
-    }
-    new ResizeObserver(drawGeometry).observe(intro);
-    drawGeometry();
+      const shiftX = ((event.clientX - bounds.left) / bounds.width - .5) * 15;
+      const shiftY = ((event.clientY - bounds.top) / bounds.height - .5) * 12;
+      intro.style.setProperty("--pointer-x", `${shiftX}px`);
+      intro.style.setProperty("--pointer-y", `${shiftY}px`);
+      intro.style.setProperty("--pointer-x-reverse", `${shiftX * -.65}px`);
+      intro.style.setProperty("--pointer-y-reverse", `${shiftY * -.65}px`);
+    });
+    intro.addEventListener("pointerleave", () => {
+      intro.style.setProperty("--pointer-x", "0px");
+      intro.style.setProperty("--pointer-y", "0px");
+      intro.style.setProperty("--pointer-x-reverse", "0px");
+      intro.style.setProperty("--pointer-y-reverse", "0px");
+    });
   }
 
   function openLightbox(photo, place) {
