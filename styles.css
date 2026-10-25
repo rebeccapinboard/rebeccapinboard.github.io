@@ -15,7 +15,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Open Sans', Arial, sans-serif; }
 button { font: inherit; }
 button:focus-visible, a:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
-.page-shell { width: min(100%, 1280px); margin: 0 auto; padding: 0 clamp(24px, 4vw, 56px); }
+.page-shell { width: min(100%, 1180px); margin: 0 auto; padding: 0 clamp(24px, 3.5vw, 48px); }
 .site-header { height: 90px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); gap: 20px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-family: 'Open Sans', Arial, sans-serif; font-size: 23px; font-weight: 700; letter-spacing: -.045em; white-space: nowrap; }
 .brand em { color: var(--coral); font-style: normal; }
@@ -114,6 +114,8 @@ h1 span { color: var(--coral); font-style: italic; white-space: nowrap; }
 .site-footer { border-top: 1px solid var(--line); min-height: 74px; display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: 11px; color: var(--muted); }
 .site-footer span:first-child { color: var(--ink); font-family: 'Open Sans', Arial, sans-serif; font-size: 15px; }
 .site-footer span span { color: var(--coral); }
+.back-to-top { position: fixed; right: clamp(18px, 2.5vw, 38px); bottom: clamp(18px, 2.5vw, 38px); z-index: 1000; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid #9bb7c5; border-radius: 50%; background: rgba(255, 254, 250, .94); color: var(--coral-dark); box-shadow: 0 6px 20px #252a2730; text-decoration: none; font-size: 24px; line-height: 1; transition: transform .18s ease, background .18s ease, color .18s ease; }
+.back-to-top:hover { transform: translateY(-3px); background: var(--coral-dark); color: white; }
 
 @media (max-width: 1050px) {
   .country-button { flex-basis: calc((100% - 16px) / 3); }
@@ -150,6 +152,7 @@ h1 span { color: var(--coral); font-style: italic; white-space: nowrap; }
   .photo-section-heading h3 { font-size: 25px; }
   .detail-map-label { top: 20px; left: 20px; }
   .site-footer { flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px; padding: 16px 0; }
+  .back-to-top { width: 44px; height: 44px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
