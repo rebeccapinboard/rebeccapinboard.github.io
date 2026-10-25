@@ -32,6 +32,25 @@
   let detailMap = null;
   let detailMarkers = null;
   const worldMarkers = new Map();
+  const intro = document.querySelector(".intro");
+
+  if (intro && window.matchMedia("(pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    intro.addEventListener("pointermove", (event) => {
+      const bounds = intro.getBoundingClientRect();
+      const x = ((event.clientX - bounds.left) / bounds.width - .5) * 28;
+      const y = ((event.clientY - bounds.top) / bounds.height - .5) * 22;
+      intro.style.setProperty("--pointer-x", `${x}px`);
+      intro.style.setProperty("--pointer-y", `${y}px`);
+      intro.style.setProperty("--pointer-x-reverse", `${x * -.65}px`);
+      intro.style.setProperty("--pointer-y-reverse", `${y * -.65}px`);
+    });
+    intro.addEventListener("pointerleave", () => {
+      intro.style.setProperty("--pointer-x", "0px");
+      intro.style.setProperty("--pointer-y", "0px");
+      intro.style.setProperty("--pointer-x-reverse", "0px");
+      intro.style.setProperty("--pointer-y-reverse", "0px");
+    });
+  }
 
   function openLightbox(photo, place) {
     lightboxImage.src = photo.src;
