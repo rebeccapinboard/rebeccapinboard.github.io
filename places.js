@@ -13,46 +13,46 @@ window.PLACES = [
     "photos": [
       {
         "src": "images/travel/italy/05-lucca-italy1-jpeg.webp",
-        "alt": "I paused beneath a broad tree in a quiet square in Lucca, Italy.",
-        "title": "Under the Lucca trees",
+        "alt": "I stopped beneath a sculptural, leafless tree beside Lucca's city walls.",
+        "title": "The Lucca tree",
         "location": "Lucca, Tuscany",
         "locationId": "lucca-tuscany",
         "coordinates": [
           43.8384,
           10.5061
         ],
-        "description": "I paused beneath a broad tree in a quiet square in Lucca, Italy. The trunk anchors the foreground while the branches spread across the frame like a canopy. Framing the pale buildings through the leaves creates depth and captures the calm shade of the square.",
+        "description": "I stopped beneath a sculptural, leafless tree beside Lucca's city walls. The wide branches spread across the blue sky and create a bold silhouette, while the buildings and path give the tree a sense of scale.",
         "sample": false
       },
       {
         "src": "images/travel/italy/12-lucca-italy-jpeg.webp",
-        "alt": "I wandered past warm stone buildings and a small street scene in Lucca, Italy.",
-        "title": "A street in Lucca",
+        "alt": "I found a floral display arranged around a statue in a quiet Lucca square.",
+        "title": "Flowers in the square",
         "location": "Lucca, Tuscany",
         "locationId": "lucca-tuscany",
         "coordinates": [
           43.8432,
           10.5012
         ],
-        "description": "I wandered past warm stone buildings and a small street scene in Lucca, Italy. The street creates a gentle leading line through the frame, while the buildings form a close architectural border. Warm afternoon light brings out the texture of the walls and the relaxed pace of the city.",
+        "description": "I found a floral display arranged around a statue in a quiet Lucca square. The white flowers form a graphic shape in the foreground, and the statue and old facade create clear layers behind it.",
         "sample": false
       },
       {
         "src": "images/travel/italy/14-piazza-san-michele-lucca-jpeg.webp",
-        "alt": "I photographed the flower-filled display outside San Michele in Foro in Lucca.",
-        "title": "Flowers in the square",
+        "alt": "I looked up at the striped marble facade of San Michele in Foro in Lucca.",
+        "title": "Looking up at San Michele",
         "location": "Piazza San Michele, Lucca",
         "locationId": "piazza-san-michele-lucca",
         "coordinates": [
           43.8429,
           10.5025
         ],
-        "description": "I photographed the flower-filled display outside San Michele in Foro in Lucca. The flowers fill the foreground with colour while the striped church facade rises behind them. This layered composition connects a small street detail with the character of the square.",
+        "description": "I looked up at the striped marble facade of San Michele in Foro in Lucca. The low viewpoint exaggerates the church's height, and the repeating arches create a strong architectural rhythm against the cloudy sky.",
         "sample": false
       },
       {
         "src": "images/travel/italy/20-milan-cathedral-jpeg.webp",
-        "alt": "I photographed the carved spires and statues of Milan Cathedral against a clear sky.",
+        "alt": "I looked up at the spires and rooftop statues of Milan Cathedral against a deep blue sky.",
         "title": "Stone and sky",
         "location": "Milan Cathedral",
         "locationId": "milan-cathedral",
@@ -60,38 +60,38 @@ window.PLACES = [
           45.4642,
           9.1906
         ],
-        "description": "I photographed the carved spires and statues of Milan Cathedral against a clear sky. The close crop removes distractions and lets the repeating Gothic details fill the frame. Side light defines the stonework and creates crisp separation between each ornament.",
+        "description": "I looked up at the spires and rooftop statues of Milan Cathedral against a deep blue sky. The low angle emphasizes their height, and the clean background separates every carved detail.",
         "sample": false
       },
       {
         "src": "images/travel/italy/21-piazza-del-duomo-milan-jpeg.webp",
-        "alt": "I stood in Piazza del Duomo and photographed Milan Cathedral rising above the square.",
-        "title": "In the great square",
+        "alt": "I photographed Milan Cathedral from the corner of Piazza del Duomo with a crowd gathering below.",
+        "title": "The great square",
         "location": "Piazza del Duomo, Milan",
         "locationId": "piazza-del-duomo-milan",
         "coordinates": [
           45.4641,
           9.1898
         ],
-        "description": "I stood in Piazza del Duomo and photographed Milan Cathedral rising above the square. The open foreground gives the facade space, while the people below show its enormous scale. A centred composition emphasizes the cathedral's symmetry and intricate detail.",
+        "description": "I photographed Milan Cathedral from the corner of Piazza del Duomo with a crowd gathering below. The wide view shows the building's scale, while the angled facade creates depth instead of flattening its intricate surface.",
         "sample": false
       },
       {
         "src": "images/travel/italy/22-piazza-del-duomo-milan-jpeg.webp",
-        "alt": "I photographed the lively edge of Piazza del Duomo with Milan Cathedral glowing beyond the crowd.",
-        "title": "Arriving at the Duomo",
+        "alt": "I stood in Piazza del Duomo as warm sunlight spread across the front of Milan Cathedral.",
+        "title": "Golden Duomo",
         "location": "Piazza del Duomo, Milan",
         "locationId": "piazza-del-duomo-milan",
         "coordinates": [
           45.464,
           9.1894
         ],
-        "description": "I photographed the lively edge of Piazza del Duomo with Milan Cathedral glowing beyond the crowd. The figures create a human foreground and lead into the bright architecture behind them. Warm light and layered depth capture the energy of arriving in the square.",
+        "description": "I stood in Piazza del Duomo as warm sunlight spread across the front of Milan Cathedral. The centred composition highlights the facade's symmetry, and the dark silhouettes of visitors make the glowing stone feel even brighter.",
         "sample": false
       },
       {
         "src": "images/travel/italy/23-duomo-milan-jpeg.webp",
-        "alt": "I looked up at the ornate facade of Milan Cathedral from close range.",
+        "alt": "I moved closer to the facade of Milan Cathedral and looked sharply upward.",
         "title": "Looking up",
         "location": "Milan Cathedral",
         "locationId": "milan-cathedral",
@@ -99,25 +99,25 @@ window.PLACES = [
           45.4646,
           9.1902
         ],
-        "description": "I looked up at the ornate facade of Milan Cathedral from close range. The upward angle exaggerates the height of the spires and fills the frame with carved detail. Clear light creates small shadows that make the pale stonework feel three-dimensional.",
+        "description": "I moved closer to the facade of Milan Cathedral and looked sharply upward. The steep perspective makes the Gothic details tower above me, while side light draws out the carvings and windows.",
         "sample": false
       },
       {
         "src": "images/travel/italy/24-milan-piazza-della-scala-jpeg.webp",
-        "alt": "I photographed the covered arcade near Piazza della Scala in Milan.",
-        "title": "Through the arcade",
+        "alt": "I photographed the glass dome and vaulted arcade inside Galleria Vittorio Emanuele II near Piazza della Scala.",
+        "title": "Under the glass dome",
         "location": "Piazza della Scala, Milan",
         "locationId": "piazza-della-scala-milan",
         "coordinates": [
           45.4672,
           9.1899
         ],
-        "description": "I photographed the covered arcade near Piazza della Scala in Milan. Repeating arches and ceiling lines create symmetry and lead toward the far end of the passage. The bright floor and darker upper structure create contrast while people add scale and movement.",
+        "description": "I photographed the glass dome and vaulted arcade inside Galleria Vittorio Emanuele II near Piazza della Scala. The symmetrical lines meet at the bright archway, guiding my eye through the ornate interior.",
         "sample": false
       },
       {
         "src": "images/travel/italy/25-venice-santa-croce-jpeg.webp",
-        "alt": "I looked down a narrow canal in Santa Croce, Venice, where boats sat between colourful buildings.",
+        "alt": "I looked down a narrow canal in Santa Croce, Venice, where boats rested against sunlit buildings.",
         "title": "A quiet Venetian canal",
         "location": "Santa Croce, Venice",
         "locationId": "santa-croce-venice",
@@ -125,12 +125,12 @@ window.PLACES = [
           45.4407,
           12.324
         ],
-        "description": "I looked down a narrow canal in Santa Croce, Venice, where boats sat between colourful buildings. The canal forms a natural leading line through the centre of the scene. Reflections, balconies, and weathered walls add texture and preserve the intimate feeling of the neighbourhood.",
+        "description": "I looked down a narrow canal in Santa Croce, Venice, where boats rested against sunlit buildings. The canal creates a central leading line, and the close walls frame a vivid slice of blue water.",
         "sample": false
       },
       {
         "src": "images/travel/italy/29-cathy-where-is-this-do-ur-research-jpeg.webp",
-        "alt": "I photographed a colourful shoreline across the Venice Lagoon, with low buildings gathered beside the water.",
+        "alt": "I photographed the low red roofs of an island across the bright blue Venice Lagoon.",
         "title": "Across the lagoon",
         "location": "Venice Lagoon",
         "locationId": "venice-lagoon",
@@ -138,7 +138,7 @@ window.PLACES = [
           45.44,
           12.36
         ],
-        "description": "I photographed a colourful shoreline across the Venice Lagoon, with low buildings gathered beside the water. The horizontal layers of water, houses, and sky keep the composition calm and spacious. Soft distance haze blends the colours and gives the scene the feeling of a memory seen from the boat.",
+        "description": "I photographed the low red roofs of an island across the bright blue Venice Lagoon. The large area of open water creates breathing room, while the distant shoreline forms a clean horizontal line beneath the sky.",
         "sample": false
       }
     ]
@@ -156,7 +156,7 @@ window.PLACES = [
     "photos": [
       {
         "src": "images/travel/switzerland/11-chapel-bridge-lucerne-jpeg.webp",
-        "alt": "I photographed Chapel Bridge crossing the Reuss River in Lucerne with the old town behind it.",
+        "alt": "I photographed Lucerne's historic waterfront across the Reuss River near Chapel Bridge.",
         "title": "Across the Reuss",
         "location": "Chapel Bridge, Lucerne",
         "locationId": "chapel-bridge-lucerne",
@@ -164,12 +164,12 @@ window.PLACES = [
           47.0513,
           8.307
         ],
-        "description": "I photographed Chapel Bridge crossing the Reuss River in Lucerne with the old town behind it. The diagonal bridge leads my eye across the water toward the tower and waterfront buildings. Reflections and clear daylight add colour while keeping the scene open and balanced.",
+        "description": "I photographed Lucerne's historic waterfront across the Reuss River near Chapel Bridge. The water opens the foreground and reflects the pale buildings, while the long row of facades creates a calm horizontal rhythm.",
         "sample": false
       },
       {
         "src": "images/travel/switzerland/13-lucerne-altstadt-wey-jpeg.webp",
-        "alt": "I looked across the Reuss River toward Lucerne's old town and Chapel Bridge.",
+        "alt": "I looked across the Reuss River toward Chapel Bridge, its water tower, and the mountains beyond Lucerne.",
         "title": "Lucerne waterfront",
         "location": "Old Town, Lucerne",
         "locationId": "old-town-lucerne",
@@ -177,25 +177,25 @@ window.PLACES = [
           47.0525,
           8.3087
         ],
-        "description": "I looked across the Reuss River toward Lucerne's old town and Chapel Bridge. I used the river as open foreground space so the bridge and buildings could stretch clearly across the frame. The repeated windows and reflections give the scene a calm visual rhythm.",
+        "description": "I looked across the Reuss River toward Chapel Bridge, its water tower, and the mountains beyond Lucerne. The bridge forms a long diagonal across the water, while the distant peaks add depth and a strong sense of place.",
         "sample": false
       },
       {
         "src": "images/travel/switzerland/15-bear-pit-bern-jpeg.webp",
-        "alt": "I watched a bear resting beside the river at Bern's Bear Park.",
-        "title": "An afternoon at Bear Park",
+        "alt": "I photographed the Aare River and Bern's old riverside buildings from the path above Bear Park.",
+        "title": "Above the Aare",
         "location": "Bear Park, Bern",
         "locationId": "bear-park-bern",
         "coordinates": [
           46.9483,
           7.4598
         ],
-        "description": "I watched a bear resting beside the river at Bern's Bear Park. The curve of the enclosure leads toward the bear, and the elevated viewpoint shows its surroundings clearly. Natural colours and soft light keep the scene observational and relaxed.",
+        "description": "I photographed the Aare River and Bern's old riverside buildings from the path above Bear Park. The river curves through the scene as a leading line, and the high viewpoint reveals the layered city beyond the trees.",
         "sample": false
       },
       {
         "src": "images/travel/switzerland/16-bern-barenpark-jpeg.webp",
-        "alt": "I photographed two bears moving through the green enclosure at Bern's Bear Park.",
+        "alt": "I watched two bears resting among the stone terraces at Bern's Bear Park.",
         "title": "Bears by the Aare",
         "location": "Bear Park, Bern",
         "locationId": "bear-park-bern",
@@ -203,12 +203,12 @@ window.PLACES = [
           46.9481,
           7.4598
         ],
-        "description": "I photographed two bears moving through the green enclosure at Bern's Bear Park. I used the foliage and rocks to frame them in their environment, with the river valley adding depth beyond. The wide view gives the animals room and records the scale of the park.",
+        "description": "I watched two bears resting among the stone terraces at Bern's Bear Park. The blocks create a repeating geometric pattern, while the open sky and distant tower place the animals within the city.",
         "sample": false
       },
       {
         "src": "images/travel/switzerland/17-switzerland-mountain-cathy-search-it-up-jpeg.webp",
-        "alt": "I found small purple crocuses pushing through the grass near Rigi Staffel on Mount Rigi.",
+        "alt": "I found a small cluster of white crocuses on the grassy slope near Rigi Staffel.",
         "title": "Alpine crocuses",
         "location": "Rigi Staffel, Mount Rigi",
         "locationId": "rigi-staffel-mount-rigi",
@@ -216,12 +216,12 @@ window.PLACES = [
           47.0531,
           8.4733
         ],
-        "description": "I found small purple crocuses pushing through the grass near Rigi Staffel on Mount Rigi. I moved close to the flowers and kept the mountain slope softly blurred behind them. The low viewpoint makes the tiny blooms feel prominent against the wide alpine landscape.",
+        "description": "I found a small cluster of white crocuses on the grassy slope near Rigi Staffel. Moving close makes the flowers the focus, while the blurred mountains behind them preserve the scale of the alpine setting.",
         "sample": false
       },
       {
         "src": "images/travel/switzerland/18-rigi-staffel-jpeg.webp",
-        "alt": "I looked across the snowy slopes and layered peaks from Rigi Staffel on Mount Rigi.",
+        "alt": "I photographed the snowy folds of the Alps from Rigi Staffel.",
         "title": "Snow on Mount Rigi",
         "location": "Rigi Staffel, Mount Rigi",
         "locationId": "rigi-staffel-mount-rigi",
@@ -229,12 +229,12 @@ window.PLACES = [
           47.0531,
           8.4733
         ],
-        "description": "I looked across the snowy slopes and layered peaks from Rigi Staffel on Mount Rigi. The diagonal snow line guides my eye into the distant mountains. Atmospheric haze separates the ridges and gives the view a strong sense of scale.",
+        "description": "I photographed the snowy folds of the Alps from Rigi Staffel. Alternating bands of snow, dark trees, and mist build depth, while the wide view lets the mountain ridges recede into the distance.",
         "sample": false
       },
       {
         "src": "images/travel/switzerland/19-vitznau-municipality-jpeg.webp",
-        "alt": "I photographed the mountain railway descending toward Lake Lucerne in Vitznau.",
+        "alt": "I photographed the railway tracks through the rear window of the mountain train in Vitznau.",
         "title": "The mountain railway",
         "location": "Vitznau, Lake Lucerne",
         "locationId": "vitznau-lake-lucerne",
@@ -242,38 +242,38 @@ window.PLACES = [
           47.0101,
           8.4826
         ],
-        "description": "I photographed the mountain railway descending toward Lake Lucerne in Vitznau. The rails form strong leading lines through the centre of the frame and draw me toward the lake below. The high viewpoint connects the machinery of the railway with the broad alpine landscape.",
+        "description": "I photographed the railway tracks through the rear window of the mountain train in Vitznau. The rails converge toward the centre and create strong perspective, while the dark window frame makes the view feel like a moment from the journey.",
         "sample": false
       },
       {
         "src": "images/travel/switzerland/26-zurich-rathaus-jpeg.webp",
-        "alt": "I photographed Zürich's old town waterfront near the Rathaus from across the Limmat River.",
-        "title": "Across the Limmat",
+        "alt": "I photographed Zürich's waterfront near the Rathaus in the blue light of evening.",
+        "title": "Blue hour in Z?rich",
         "location": "Rathaus, Zürich",
         "locationId": "rathaus-z-rich",
         "coordinates": [
           47.3756,
           8.5424
         ],
-        "description": "I photographed Zürich's old town waterfront near the Rathaus from across the Limmat River. The river creates a clean foreground and reflects the row of historic buildings. A wide composition lets the repeated facades and church towers describe the shape of the city.",
+        "description": "I photographed Zürich's waterfront near the Rathaus in the blue light of evening. The river fills the foreground with gentle reflections, while the low skyline and open sky keep the composition calm.",
         "sample": false
       },
       {
         "src": "images/travel/switzerland/27-switzerland-jpeg.webp",
-        "alt": "I watched a blue Swiss lake pass beneath steep, misty mountains.",
-        "title": "Lake between mountains",
+        "alt": "I watched a Swiss lake pass beneath steep mountains from the train.",
+        "title": "Lake from the train",
         "location": "Lake Lucerne region",
         "locationId": "lake-lucerne-region",
         "coordinates": [
           47.02,
           8.42
         ],
-        "description": "I watched a blue Swiss lake pass beneath steep, misty mountains. The shoreline runs diagonally through the frame and guides my eye toward the distant valley. Layers of water, town, and mountain create depth, while the cool haze gives the scene a quiet mood.",
+        "description": "I watched a Swiss lake pass beneath steep mountains from the train. Horizontal bands of track, water, and rock create layers, while the pale sky softens the rugged landscape.",
         "sample": false
       },
       {
         "src": "images/travel/switzerland/28-switzerland-mountain-thing-jpeg.webp",
-        "alt": "I photographed a broad Swiss valley enclosed by high mountains and small villages.",
+        "alt": "I photographed a green alpine valley beneath snow-dusted Swiss peaks.",
         "title": "The valley opens",
         "location": "Swiss Alps",
         "locationId": "swiss-alps",
@@ -281,7 +281,7 @@ window.PLACES = [
           46.63,
           8.04
         ],
-        "description": "I photographed a broad Swiss valley enclosed by high mountains and small villages. The valley acts as a leading line toward the distant peaks, with the slopes forming a natural frame on both sides. Haze and changing tones separate the foreground from the background and reveal the scale of the landscape.",
+        "description": "I photographed a green alpine valley beneath snow-dusted Swiss peaks. The dark mountains frame the bright meadow, and the line of houses at their base gives the landscape an immense sense of scale.",
         "sample": false
       }
     ]
@@ -299,20 +299,20 @@ window.PLACES = [
     "photos": [
       {
         "src": "images/travel/australia/06-balwyn-melb1-jpeg.webp",
-        "alt": "I stopped for a close look at soft pink flowers in Balwyn, Melbourne.",
-        "title": "Soft pink",
+        "alt": "I photographed tiny purple flowers growing through bright green groundcover in Balwyn, Melbourne.",
+        "title": "Garden haze",
         "location": "Balwyn, Melbourne",
         "locationId": "balwyn-melbourne",
         "coordinates": [
           -37.809,
           145.083
         ],
-        "description": "I stopped for a close look at soft pink flowers in Balwyn, Melbourne. I filled the frame with petals and used a shallow depth of field to blur the garden behind them. The gentle light brings out the fine texture and keeps the colours delicate.",
+        "description": "I photographed tiny purple flowers growing through bright green groundcover in Balwyn, Melbourne. A low angle brings me into the garden, and the shallow focus gives the flowers a soft, dreamlike quality.",
         "sample": false
       },
       {
         "src": "images/travel/australia/31-melb-city-flinders-lane-jpeg.webp",
-        "alt": "I photographed the tall buildings and narrow street along Flinders Lane in Melbourne.",
+        "alt": "I walked down a narrow, lively stretch of Flinders Lane in Melbourne.",
         "title": "Down Flinders Lane",
         "location": "Flinders Lane, Melbourne",
         "locationId": "flinders-lane-melbourne",
@@ -320,12 +320,12 @@ window.PLACES = [
           -37.8157,
           144.9665
         ],
-        "description": "I photographed the tall buildings and narrow street along Flinders Lane in Melbourne. The edges of the road and facades create leading lines that draw my eye through the city. The vertical frame emphasizes height, while pedestrians and signs give the scene everyday energy.",
+        "description": "I walked down a narrow, lively stretch of Flinders Lane in Melbourne. The buildings form a natural frame, and the bright strip of pavement leads my eye toward the people in the distance.",
         "sample": false
       },
       {
         "src": "images/travel/australia/32-phillip-island-aus-jpeg.webp",
-        "alt": "I spotted a seabird standing among the coastal plants on Phillip Island, Australia.",
+        "alt": "I caught a seagull gliding just above the ocean at Phillip Island.",
         "title": "A coastal neighbour",
         "location": "Phillip Island, Victoria",
         "locationId": "phillip-island-victoria",
@@ -333,38 +333,38 @@ window.PLACES = [
           -38.5103,
           145.1502
         ],
-        "description": "I spotted a seabird standing among the coastal plants on Phillip Island, Australia. I placed the bird against a softly blurred background so its shape and markings stayed clear. The low viewpoint brings me close to its world and lets the windswept vegetation frame it naturally.",
+        "description": "I caught a seagull gliding just above the ocean at Phillip Island. The bird sits clearly against the blue water, and the slight tilt of the horizon adds movement to the fleeting moment.",
         "sample": false
       },
       {
         "src": "images/travel/australia/35-melb-collins-street-precinct-jpeg.webp",
-        "alt": "I looked along Collins Street in central Melbourne as trams, cars, and pedestrians moved between the buildings.",
-        "title": "The Collins Street rhythm",
+        "alt": "I looked up along a shaded block in Melbourne's Collins Street precinct.",
+        "title": "The Collins Street canopy",
         "location": "Collins Street, Melbourne",
         "locationId": "collins-street-melbourne",
         "coordinates": [
           -37.8145,
           144.9702
         ],
-        "description": "I looked along Collins Street in central Melbourne as trams, cars, and pedestrians moved between the buildings. The tram tracks and street edges form leading lines into the distance. Repeating windows and vertical facades create a steady city rhythm around the busy street.",
+        "description": "I looked up along a shaded block in Melbourne's Collins Street precinct. The tree canopy frames the buildings, and the upward angle emphasizes the mix of older facades and taller city forms.",
         "sample": false
       },
       {
         "src": "images/travel/australia/38-balwyn-melb-jpeg.webp",
-        "alt": "I photographed pink blossoms opening along a branch in Balwyn, Melbourne.",
-        "title": "Blossom study",
+        "alt": "I moved close to small pink and white daisies growing in the grass in Balwyn, Melbourne.",
+        "title": "Among the daisies",
         "location": "Balwyn, Melbourne",
         "locationId": "balwyn-melbourne",
         "coordinates": [
           -37.809,
           145.083
         ],
-        "description": "I photographed pink blossoms opening along a branch in Balwyn, Melbourne. The branch runs diagonally across the frame and guides my eye from flower to flower. A shallow depth of field softens the background and gives the petals a light, airy feeling.",
+        "description": "I moved close to small pink and white daisies growing in the grass in Balwyn, Melbourne. The shallow focus isolates one bloom, while the stems and scattered flowers create a loose, natural rhythm.",
         "sample": false
       },
       {
         "src": "images/travel/australia/44-balwyn-victoria-jpeg.webp",
-        "alt": "I stopped beneath a tree covered in pale blossoms in Balwyn, Victoria.",
+        "alt": "I looked up at pale blossoms against a clear blue sky in Balwyn, Victoria.",
         "title": "Spring overhead",
         "location": "Balwyn, Victoria",
         "locationId": "balwyn-victoria",
@@ -372,33 +372,33 @@ window.PLACES = [
           -37.809,
           145.083
         ],
-        "description": "I stopped beneath a tree covered in pale blossoms in Balwyn, Victoria. Looking upward lets the branches spread across the frame and creates a natural pattern against the sky. Soft backlight brightens the petals and gives the scene a fresh spring feeling.",
+        "description": "I looked up at pale blossoms against a clear blue sky in Balwyn, Victoria. The branches reach diagonally through the frame, and the bright background gives the flowers a light spring feeling.",
         "sample": false
       },
       {
         "src": "images/travel/australia/48-kew-cotham-ward-jpeg.webp",
-        "alt": "I looked up at a tall utility pole and leafy tree in Kew's Cotham Ward, Melbourne.",
-        "title": "Suburban lines",
+        "alt": "I looked up at white blossoms surrounding a traffic light in Kew's Cotham Ward.",
+        "title": "Blossoms at the crossing",
         "location": "Cotham Ward, Kew",
         "locationId": "cotham-ward-kew",
         "coordinates": [
           -37.807,
           145.0345
         ],
-        "description": "I looked up at a tall utility pole and leafy tree in Kew's Cotham Ward, Melbourne. The pole creates a strong vertical line while cables cut diagonally across the sky. This simple upward viewpoint turns an everyday suburban detail into a graphic composition.",
+        "description": "I looked up at white blossoms surrounding a traffic light in Kew's Cotham Ward. The dark signal pole creates a strong vertical anchor, while the branches spread softly across the blue sky.",
         "sample": false
       },
       {
         "src": "images/travel/australia/49-st-paul-s-cathedral-melb-jpeg.webp",
-        "alt": "I photographed St Paul's Cathedral rising beside the streets of central Melbourne.",
-        "title": "Above the city",
+        "alt": "I photographed the shaded lawn and stone exterior of St Paul's Cathedral in Melbourne.",
+        "title": "Shade at St Paul's",
         "location": "St Paul's Cathedral, Melbourne",
         "locationId": "st-paul-s-cathedral-melbourne",
         "coordinates": [
           -37.817,
           144.9677
         ],
-        "description": "I photographed St Paul's Cathedral rising beside the streets of central Melbourne. The low angle emphasizes the height of the spires and lets the warm stone stand clearly against the sky. Street elements at the edge of the frame keep the landmark connected to the city around it.",
+        "description": "I photographed the shaded lawn and stone exterior of St Paul's Cathedral in Melbourne. The tree canopy frames the building, while people resting along the path give the quiet city scene a human scale.",
         "sample": false
       }
     ]
@@ -416,20 +416,20 @@ window.PLACES = [
     "photos": [
       {
         "src": "images/travel/china/07-chongqing-4-jpeg.webp",
-        "alt": "I looked across the layered hillside buildings from the Mountain City Trail in Chongqing.",
-        "title": "A city in layers",
+        "alt": "I walked beneath a ceiling of colourful paper lanterns on Chongqing's Mountain City Trail.",
+        "title": "Lantern canopy",
         "location": "Mountain City Trail, Chongqing",
         "locationId": "mountain-city-trail-chongqing",
         "coordinates": [
           29.5586,
           106.5528
         ],
-        "description": "I looked across the layered hillside buildings from the Mountain City Trail in Chongqing. The stacked architecture fills the frame and shows how the city climbs through the landscape. Haze softens the distant forms, creating depth between each layer of buildings.",
+        "description": "I walked beneath a ceiling of colourful paper lanterns on Chongqing's Mountain City Trail. The lanterns repeat toward the centre of the frame and create a vivid leading line through the narrow passage.",
         "sample": false
       },
       {
         "src": "images/travel/china/08-chongqing-3-jpeg.webp",
-        "alt": "I photographed a leafy corner along Chongqing's Mountain City Trail.",
+        "alt": "I photographed a small patch of leaves glowing beside a dark rock face on Chongqing's Mountain City Trail.",
         "title": "A leafy pause",
         "location": "Mountain City Trail, Chongqing",
         "locationId": "mountain-city-trail-chongqing",
@@ -437,25 +437,25 @@ window.PLACES = [
           29.5586,
           106.5528
         ],
-        "description": "I photographed a leafy corner along Chongqing's Mountain City Trail. The branches frame the older buildings and offer a quiet pause within the dense city. Soft daylight and subdued colour help the textures of brick, concrete, and foliage sit together naturally.",
+        "description": "I photographed a small patch of leaves glowing beside a dark rock face on Chongqing's Mountain City Trail. The deep shadows isolate the green leaves, while the railing creates a quiet diagonal at the edge of the scene.",
         "sample": false
       },
       {
         "src": "images/travel/china/09-chongqing-2-jpeg.webp",
-        "alt": "I followed a narrow lane along Chongqing's Mountain City Trail as it disappeared between the buildings.",
-        "title": "The lane ahead",
+        "alt": "I found a shop filled with orange cups, toys, and soft characters on Chongqing's Mountain City Trail.",
+        "title": "The orange collection",
         "location": "Mountain City Trail, Chongqing",
         "locationId": "mountain-city-trail-chongqing",
         "coordinates": [
           29.5586,
           106.5528
         ],
-        "description": "I followed a narrow lane along Chongqing's Mountain City Trail as it disappeared between the buildings. The road edges and walls form strong leading lines that pull me forward. The vertical composition emphasizes the steep, enclosed feeling of the neighbourhood.",
+        "description": "I found a shop filled with orange cups, toys, and soft characters on Chongqing's Mountain City Trail. Filling the frame with one colour creates visual unity, while the repeated round shapes make the display feel playful and abundant.",
         "sample": false
       },
       {
         "src": "images/travel/china/10-chongqing-1-jpeg.webp",
-        "alt": "I photographed an old hillside building tucked into greenery on Chongqing's Mountain City Trail.",
+        "alt": "I looked up at a modern hillside building surrounded by trees on Chongqing's Mountain City Trail.",
         "title": "Hidden on the hillside",
         "location": "Mountain City Trail, Chongqing",
         "locationId": "mountain-city-trail-chongqing",
@@ -463,25 +463,25 @@ window.PLACES = [
           29.5586,
           106.5528
         ],
-        "description": "I photographed an old hillside building tucked into greenery on Chongqing's Mountain City Trail. Placing the structure behind foreground leaves creates layers and makes the scene feel discovered. The soft light brings out weathered surfaces without losing detail in the shadows.",
+        "description": "I looked up at a modern hillside building surrounded by trees on Chongqing's Mountain City Trail. The branches frame the balconies, and the stacked levels emphasize how the architecture rises through the landscape.",
         "sample": false
       },
       {
         "src": "images/travel/china/33-chongqing-jpeg.webp",
-        "alt": "I photographed hanging lanterns and a narrow stairway on Chongqing's Mountain City Trail.",
-        "title": "Lantern stairway",
+        "alt": "I found baskets of handmade dolls and fabric pieces on Chongqing's Mountain City Trail.",
+        "title": "Handmade details",
         "location": "Mountain City Trail, Chongqing",
         "locationId": "mountain-city-trail-chongqing",
         "coordinates": [
           29.5586,
           106.5528
         ],
-        "description": "I photographed hanging lanterns and a narrow stairway on Chongqing's Mountain City Trail. The steps pull my eye upward through the frame, while the lanterns repeat overhead and add rhythm. Deep reds against dark walls create warmth and a strong sense of place.",
+        "description": "I found baskets of handmade dolls and fabric pieces on Chongqing's Mountain City Trail. The close framing lets the textures and small details fill the image, while the crowded arrangement captures the character of the stall.",
         "sample": false
       },
       {
         "src": "images/travel/china/39-chongqing-jpeg.webp",
-        "alt": "I found a cat sitting among beads and ornaments in Ciqikou Ancient Town, Chongqing.",
+        "alt": "I met a fluffy white cat resting across a jewellery counter in Ciqikou Ancient Town, Chongqing.",
         "title": "The shopkeeper",
         "location": "Ciqikou Ancient Town, Chongqing",
         "locationId": "ciqikou-ancient-town-chongqing",
@@ -489,25 +489,25 @@ window.PLACES = [
           29.5792,
           106.4518
         ],
-        "description": "I found a cat sitting among beads and ornaments in Ciqikou Ancient Town, Chongqing. The surrounding objects create a colourful frame around its face and make the stall feel abundant. I focused closely on the cat so its calm expression becomes the centre of the busy scene.",
+        "description": "I met a fluffy white cat resting across a jewellery counter in Ciqikou Ancient Town, Chongqing. The close viewpoint makes the cat the clear subject, while the rows of bracelets and boxes add colour and context around it.",
         "sample": false
       },
       {
         "src": "images/travel/china/41-shanghai-jpeg.webp",
-        "alt": "I watched an aircraft and the wide runway through the windows at Shanghai Pudong International Airport.",
-        "title": "Between journeys",
+        "alt": "I watched an orange sunset through the glass and steel structure at Shanghai Pudong International Airport.",
+        "title": "Sunset between journeys",
         "location": "Shanghai Pudong International Airport",
         "locationId": "shanghai-pudong-international-airport",
         "coordinates": [
           31.1443,
           121.8083
         ],
-        "description": "I watched an aircraft and the wide runway through the windows at Shanghai Pudong International Airport. The window lines frame the view and create a quiet sense of waiting between journeys. Open sky and runway space keep the composition simple and spacious.",
+        "description": "I watched an orange sunset through the glass and steel structure at Shanghai Pudong International Airport. The diagonal framing and reflected sky turn the terminal view into a graphic composition filled with warm light.",
         "sample": false
       },
       {
         "src": "images/travel/china/42-jpeg.webp",
-        "alt": "I photographed Jiefangbei rising above the lights and signs of central Chongqing at night.",
+        "alt": "I photographed the illuminated Jiefangbei clock tower rising through the dark centre of Chongqing.",
         "title": "Jiefangbei after dark",
         "location": "Jiefangbei, Chongqing",
         "locationId": "jiefangbei-chongqing",
@@ -515,20 +515,20 @@ window.PLACES = [
           29.5571,
           106.577
         ],
-        "description": "I photographed Jiefangbei rising above the lights and signs of central Chongqing at night. The tower sits near the centre as a clear anchor while the surrounding buildings create layers of city detail. Warm illumination against the dark sky gives the landmark a strong glow.",
+        "description": "I photographed the illuminated Jiefangbei clock tower rising through the dark centre of Chongqing. The bright tower creates a clear focal point, while the surrounding curves and windows layer the night skyline behind it.",
         "sample": false
       },
       {
         "src": "images/travel/china/46-chongqing-idk-the-road.webp",
-        "alt": "I photographed a steep neighbourhood road winding between old buildings in Chongqing.",
-        "title": "Uphill in Chongqing",
+        "alt": "I photographed a bus moving through a blue-lit Chongqing street at night.",
+        "title": "A blue night in Chongqing",
         "location": "Chongqing",
         "locationId": "chongqing",
         "coordinates": [
           29.563,
           106.5516
         ],
-        "description": "I photographed a steep neighbourhood road winding between old buildings in Chongqing. The road edges and walls lead my eye uphill and reveal the city's layered terrain. Including signs, wires, and everyday details gives the image an honest street-level sense of place.",
+        "description": "I photographed a bus moving through a blue-lit Chongqing street at night. The trees frame the traffic, and the cool colour palette gives this ordinary city moment a cinematic mood.",
         "sample": false
       }
     ]
@@ -546,72 +546,72 @@ window.PLACES = [
     "photos": [
       {
         "src": "images/travel/japan/01-nara-japan-kasugataisha-shrine4-jpeg.webp",
-        "alt": "I found a deer resting beside the mossy stone lanterns at Kasuga Taisha in Nara.",
-        "title": "Lantern grove",
+        "alt": "I photographed a deer walking past the vermilion buildings and stone lanterns of Kasuga Taisha in Nara.",
+        "title": "Shrine crossing",
         "location": "Kasuga Taisha, Nara",
         "locationId": "kasuga-taisha-nara",
         "coordinates": [
           34.6814,
           135.8484
         ],
-        "description": "I found a deer resting beside the mossy stone lanterns at Kasuga Taisha in Nara. I placed the deer low in the frame and let the repeating lanterns guide my eye deeper into the quiet forest. The soft, even light keeps the greens gentle and the moment peaceful.",
+        "description": "I photographed a deer walking past the vermilion buildings and stone lanterns of Kasuga Taisha in Nara. The red columns frame the deer, while the path and roofline lead my eye through the shrine grounds.",
         "sample": false
       },
       {
         "src": "images/travel/japan/02-nara-japan-kasugataisha-shrine3-jpeg.webp",
-        "alt": "I photographed a deer standing among the stone lanterns at Kasuga Taisha in Nara.",
-        "title": "Among the lanterns",
+        "alt": "I caught a deer pausing in a patch of sunlight beside the red shrine buildings at Kasuga Taisha in Nara.",
+        "title": "A sunlit pause",
         "location": "Kasuga Taisha, Nara",
         "locationId": "kasuga-taisha-nara",
         "coordinates": [
           34.6814,
           135.8484
         ],
-        "description": "I photographed a deer standing among the stone lanterns at Kasuga Taisha in Nara. The lanterns create a natural frame around the deer, while their repetition adds rhythm and depth. Warm autumn leaves give the muted stone and woodland a small lift of colour.",
+        "description": "I caught a deer pausing in a patch of sunlight beside the red shrine buildings at Kasuga Taisha in Nara. The vertical column balances the deer, and the contrast between warm architecture and shaded greenery gives the scene depth.",
         "sample": false
       },
       {
         "src": "images/travel/japan/03-nara-japan-kasugataisha-shrine2-jpeg.webp",
-        "alt": "I caught a deer looking through the lantern-lined grounds of Kasuga Taisha in Nara.",
-        "title": "A quiet encounter",
+        "alt": "I looked down the stone steps as a deer wandered between the old lanterns at Kasuga Taisha in Nara.",
+        "title": "Down the stone steps",
         "location": "Kasuga Taisha, Nara",
         "locationId": "kasuga-taisha-nara",
         "coordinates": [
           34.6814,
           135.8484
         ],
-        "description": "I caught a deer looking through the lantern-lined grounds of Kasuga Taisha in Nara. I used the lanterns in the foreground to build layers and draw attention toward its face. The shallow depth of field separates the deer from the busy forest behind it.",
+        "description": "I looked down the stone steps as a deer wandered between the old lanterns at Kasuga Taisha in Nara. The descending path creates a strong diagonal, and the lanterns repeat through the frame to guide my eye toward the deer.",
         "sample": false
       },
       {
         "src": "images/travel/japan/04-nara-japan-kasugataisha-shrine1-jpeg.webp",
-        "alt": "I photographed the lantern path leading through the forest at Kasuga Taisha in Nara.",
-        "title": "Forest path",
+        "alt": "I photographed a deer grazing beneath fiery autumn leaves near the red bridge at Kasuga Taisha in Nara.",
+        "title": "Autumn at Kasuga",
         "location": "Kasuga Taisha, Nara",
         "locationId": "kasuga-taisha-nara",
         "coordinates": [
           34.6814,
           135.8484
         ],
-        "description": "I photographed the lantern path leading through the forest at Kasuga Taisha in Nara. The path and rows of lanterns act as leading lines that pull me into the scene. Dappled light and deep greens preserve the shaded, almost secret feeling of the walk.",
+        "description": "I photographed a deer grazing beneath fiery autumn leaves near the red bridge at Kasuga Taisha in Nara. The low deer anchors the foreground, while the bridge and glowing canopy layer warm colour across the scene.",
         "sample": false
       },
       {
         "src": "images/travel/japan/30-nara-kasugataisha-shrine-jpeg.webp",
-        "alt": "I photographed a deer beside the lanterns and red shrine buildings at Kasuga Taisha in Nara.",
-        "title": "Beside the shrine",
+        "alt": "I photographed a deer grazing beside mossy stone lanterns at Kasuga Taisha in Nara.",
+        "title": "Beside the lanterns",
         "location": "Kasuga Taisha, Nara",
         "locationId": "kasuga-taisha-nara",
         "coordinates": [
           34.6814,
           135.8484
         ],
-        "description": "I photographed a deer beside the lanterns and red shrine buildings at Kasuga Taisha in Nara. The deer sits in the foreground while the path and architecture create depth behind it. Warm red accents stand out against the earthy stone and woodland colours.",
+        "description": "I photographed a deer grazing beside mossy stone lanterns at Kasuga Taisha in Nara. The lanterns repeat into the background, and the tree trunks create vertical layers around the deer.",
         "sample": false
       },
       {
         "src": "images/travel/japan/34-osaka-universal-world-nintendo-jpeg.webp",
-        "alt": "I photographed the bright entrance to Super Nintendo World at Universal Studios Japan in Osaka.",
+        "alt": "I looked up at the colourful stacked world of Super Nintendo World at Universal Studios Japan in Osaka.",
         "title": "Into Nintendo World",
         "location": "Super Nintendo World, Osaka",
         "locationId": "super-nintendo-world-osaka",
@@ -619,25 +619,25 @@ window.PLACES = [
           34.6654,
           135.4338
         ],
-        "description": "I photographed the bright entrance to Super Nintendo World at Universal Studios Japan in Osaka. The circular tunnel creates a bold frame and pulls my eye toward the colourful world beyond. Saturated colour and repeated game-inspired shapes make the scene playful and energetic.",
+        "description": "I looked up at the colourful stacked world of Super Nintendo World at Universal Studios Japan in Osaka. The low angle makes the game-like buildings feel tall and immersive, while bold primary colours stand out against the blue sky.",
         "sample": false
       },
       {
         "src": "images/travel/japan/36-osaka-universal-world-harrrry-potter-jpeg.webp",
-        "alt": "I photographed the snowy rooftops of Hogsmeade in The Wizarding World of Harry Potter at Universal Studios Japan in Osaka.",
-        "title": "Snowy Hogsmeade",
+        "alt": "I photographed Hogwarts Castle rising above the lake at Universal Studios Japan in Osaka.",
+        "title": "Hogwarts across the lake",
         "location": "The Wizarding World, Osaka",
         "locationId": "the-wizarding-world-osaka",
         "coordinates": [
           34.6654,
           135.4323
         ],
-        "description": "I photographed the snowy rooftops of Hogsmeade in The Wizarding World of Harry Potter at Universal Studios Japan in Osaka. The clustered roofs create layers that lead toward the castle-like forms behind them. Dark timber, pale snow, and warm window details build a theatrical storybook atmosphere.",
+        "description": "I photographed Hogwarts Castle rising above the lake at Universal Studios Japan in Osaka. The water and rocky base create layered foreground depth, while the castle is set clearly against the bright, cloud-filled sky.",
         "sample": false
       },
       {
         "src": "images/travel/japan/37-osaka-soemoncho-jpeg.webp",
-        "alt": "I photographed the glowing signs and crowds of Soemoncho beside Dotonbori in Osaka.",
+        "alt": "I photographed Soemoncho and the Dotonbori Canal glowing after dark in Osaka.",
         "title": "Soemoncho at night",
         "location": "Soemoncho, Osaka",
         "locationId": "soemoncho-osaka",
@@ -645,12 +645,12 @@ window.PLACES = [
           34.669,
           135.5027
         ],
-        "description": "I photographed the glowing signs and crowds of Soemoncho beside Dotonbori in Osaka. The street narrows toward the centre, creating strong perspective and drawing me into the lights. Bright signs, reflections, and overlapping figures capture the dense energy of the night.",
+        "description": "I photographed Soemoncho and the Dotonbori Canal glowing after dark in Osaka. The bridge railing anchors the foreground, and long reflections stretch the neon colour down through the water.",
         "sample": false
       },
       {
         "src": "images/travel/japan/40-universal-world-osaka-jpeg.webp",
-        "alt": "I photographed the spinning globe outside Universal Studios Japan in Osaka.",
+        "alt": "I photographed the Universal Studios globe above the busy entrance plaza in Osaka.",
         "title": "Around the world",
         "location": "Universal Studios Japan, Osaka",
         "locationId": "universal-studios-japan-osaka",
@@ -658,12 +658,12 @@ window.PLACES = [
           34.6654,
           135.4323
         ],
-        "description": "I photographed the spinning globe outside Universal Studios Japan in Osaka. The globe fills the centre of the frame while the curved lettering carries my eye around it. A wide view includes the entrance plaza and visitors, giving the landmark a lively sense of scale.",
+        "description": "I photographed the Universal Studios globe above the busy entrance plaza in Osaka. The globe forms a strong central landmark, while the crowd below gives it scale and a lively sense of arrival.",
         "sample": false
       },
       {
         "src": "images/travel/japan/43-osaka-soemoncho-jpeg.webp",
-        "alt": "I looked across the Dotonbori Canal toward the illuminated buildings of Soemoncho in Osaka.",
+        "alt": "I looked across the Dotonbori Canal toward Osaka's glowing Glico running man sign.",
         "title": "Colour on the canal",
         "location": "Dotonbori Canal, Osaka",
         "locationId": "dotonbori-canal-osaka",
@@ -671,25 +671,25 @@ window.PLACES = [
           34.6687,
           135.5013
         ],
-        "description": "I looked across the Dotonbori Canal toward the illuminated buildings of Soemoncho in Osaka. The canal reflections stretch the signs downward and double the colour in the scene. The bridge and waterfront form horizontal layers that balance the dense lights above.",
+        "description": "I looked across the Dotonbori Canal toward Osaka's glowing Glico running man sign. The canal and railings build horizontal layers, while reflected signs carry the neon colour into the water.",
         "sample": false
       },
       {
         "src": "images/travel/japan/45-nara-park-japan-jpeg.webp",
-        "alt": "I photographed a deer resting among the trees in Nara Park, Japan.",
-        "title": "Stillness in Nara Park",
+        "alt": "I photographed sunset spreading over Nara from an elevated window near Nara Park.",
+        "title": "Sunset over Nara",
         "location": "Nara Park",
         "locationId": "nara-park",
         "coordinates": [
           34.6851,
           135.843
         ],
-        "description": "I photographed a deer resting among the trees in Nara Park, Japan. The trunks create a loose frame around the animal, while the open ground keeps the composition calm. Soft woodland light and earthy colours preserve the gentle stillness of the moment.",
+        "description": "I photographed sunset spreading over Nara from an elevated window near Nara Park. The low sun becomes the focal point, while rooftops and distant silhouettes create layers across the warm horizon.",
         "sample": false
       },
       {
         "src": "images/travel/japan/47-japan-nagoya-kayaba-jpeg.webp",
-        "alt": "I photographed a quiet residential corner in Kayaba, Nagoya, with parked cars and low buildings.",
+        "alt": "I photographed a quiet street corner in Kayaba, Nagoya, with apartments and overhead wires against a blue sky.",
         "title": "A Nagoya neighbourhood",
         "location": "Kayaba, Nagoya",
         "locationId": "kayaba-nagoya",
@@ -697,7 +697,7 @@ window.PLACES = [
           35.177,
           136.948
         ],
-        "description": "I photographed a quiet residential corner in Kayaba, Nagoya, with parked cars and low buildings. The road and curb create leading lines into the neighbourhood. Muted colours and an eye-level viewpoint make the scene feel personal, like a small moment from an ordinary walk.",
+        "description": "I photographed a quiet street corner in Kayaba, Nagoya, with apartments and overhead wires against a blue sky. The road curves into the scene, while the strong vertical buildings and utility pole describe the neighbourhood's everyday geometry.",
         "sample": false
       }
     ]
