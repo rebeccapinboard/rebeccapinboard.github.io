@@ -33,23 +33,99 @@
   let detailMarkers = null;
   const worldMarkers = new Map();
   const intro = document.querySelector(".intro");
+  const geometryCanvas = byId("hero-geometry");
 
-  if (intro && window.matchMedia("(pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    intro.addEventListener("pointermove", (event) => {
+  if (intro && geometryCanvas) {
+    const context = geometryCanvas.getContext("2d");
+    let pointer = null;
+
+    const drawGeometry = () => {
       const bounds = intro.getBoundingClientRect();
-      const x = ((event.clientX - bounds.left) / bounds.width - .5) * 28;
-      const y = ((event.clientY - bounds.top) / bounds.height - .5) * 22;
-      intro.style.setProperty("--pointer-x", `${x}px`);
-      intro.style.setProperty("--pointer-y", `${y}px`);
-      intro.style.setProperty("--pointer-x-reverse", `${x * -.65}px`);
-      intro.style.setProperty("--pointer-y-reverse", `${y * -.65}px`);
-    });
-    intro.addEventListener("pointerleave", () => {
-      intro.style.setProperty("--pointer-x", "0px");
-      intro.style.setProperty("--pointer-y", "0px");
-      intro.style.setProperty("--pointer-x-reverse", "0px");
-      intro.style.setProperty("--pointer-y-reverse", "0px");
-    });
+      const width = bounds.width;
+      const height = bounds.height;
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      const pixelWidth = Math.round(width * ratio);
+      const pixelHeight = Math.round(height * ratio);
+      if (geometryCanvas.width !== pixelWidth || geometryCanvas.height !== pixelHeight) {
+        geometryCanvas.width = pixelWidth;
+        geometryCanvas.height = pixelHeight;
+      }
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+      context.clearRect(0, 0, width, height);
+
+      const spacing = width < 700 ? 58 : 68;
+      const points = [];
+      for (let row = 0, y = 25; y < height + spacing; row += 1, y += spacing) {
+        for (let column = 0, x = -20; x < width + spacing; column += 1, x += spacing) {
+          const baseX = x + (row % 2) * spacing * .5 + Math.sin(row * 8 + column * 3) * 9;
+          const baseY = y + Math.cos(column * 7 + row * 2) * 8;
+          let pointX = baseX;
+          let pointY = baseY;
+          let influence = 0;
+          if (pointer) {
+            const deltaX = baseX - pointer.x;
+            const deltaY = baseY - pointer.y;
+            const distance = Math.hypot(deltaX, deltaY);
+            influence = Math.max(0, 1 - distance / 175);
+            if (distance > 0) {
+              pointX += (deltaX / distance) * influence * 23;
+              pointY += (deltaY / distance) * influence * 23;
+            }
+          }
+          points.push({ x: pointX, y: pointY, influence });
+        }
+      }
+
+      for (let first = 0; first < points.length; first += 1) {
+        for (let second = first + 1; second < points.length; second += 1) {
+          const a = points[first];
+          const b = points[second];
+          const distance = Math.hypot(a.x - b.x, a.y - b.y);
+          if (distance > spacing * 1.22) continue;
+          const strength = Math.max(a.influence, b.influence);
+          context.beginPath();
+          context.moveTo(a.x, a.y);
+          context.lineTo(b.x, b.y);
+          context.strokeStyle = `rgba(79, 120, 144, ${.065 + strength * .3})`;
+          context.lineWidth = .7 + strength * .8;
+          context.stroke();
+        }
+      }
+
+      points.forEach((point) => {
+        context.beginPath();
+        context.arc(point.x, point.y, 1.25 + point.influence * 2.2, 0, Math.PI * 2);
+        context.fillStyle = `rgba(49, 86, 109, ${.14 + point.influence * .62})`;
+        context.fill();
+      });
+
+      if (pointer) {
+        context.beginPath();
+        context.arc(pointer.x, pointer.y, 34, 0, Math.PI * 2);
+        context.strokeStyle = "rgba(79, 120, 144, .42)";
+        context.lineWidth = 1;
+        context.stroke();
+        context.beginPath();
+        context.arc(pointer.x, pointer.y, 4, 0, Math.PI * 2);
+        context.fillStyle = "rgba(49, 86, 109, .72)";
+        context.fill();
+      }
+    };
+
+    const canFollowPointer = window.matchMedia("(pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (canFollowPointer) {
+      intro.addEventListener("pointermove", (event) => {
+        const bounds = intro.getBoundingClientRect();
+        pointer = { x: event.clientX - bounds.left, y: event.clientY - bounds.top };
+        drawGeometry();
+      });
+      intro.addEventListener("pointerleave", () => {
+        pointer = null;
+        drawGeometry();
+      });
+    }
+    new ResizeObserver(drawGeometry).observe(intro);
+    drawGeometry();
   }
 
   function openLightbox(photo, place) {

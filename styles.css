@@ -22,19 +22,9 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--coral); outline
 .brand-icon { display: grid; place-items: center; color: var(--coral); font-family: Arial, sans-serif; font-size: 34px; line-height: 1; }
 .header-note { color: var(--muted); font-size: 12px; letter-spacing: .025em; }
 .header-note span { color: var(--coral); margin-left: 10px; font-size: 18px; }
-.intro { --pointer-x: 0px; --pointer-y: 0px; --pointer-x-reverse: 0px; --pointer-y-reverse: 0px; min-height: 300px; position: relative; isolation: isolate; display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 48px 0 51px; overflow: hidden; }
+.intro { min-height: 300px; position: relative; isolation: isolate; display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 48px 0 51px; overflow: hidden; }
 .intro-copy { position: relative; z-index: 2; max-width: 760px; }
-.hero-geometry { position: absolute; z-index: -1; inset: 14px 0 12px 42%; pointer-events: none; opacity: .52; transition: opacity .35s ease; }
-.intro:hover .hero-geometry { opacity: .9; }
-.geometry-shape { position: absolute; display: block; border-color: #7d9dad; transition: transform .14s ease-out, border-color .35s ease, background .35s ease; will-change: transform; }
-.geometry-ring { width: 190px; height: 190px; top: 5px; right: 88px; border: 1px solid; border-radius: 50%; transform: translate(var(--pointer-x), var(--pointer-y)); }
-.geometry-ring::before, .geometry-ring::after { content: ''; position: absolute; inset: 25px; border: 1px solid #a9bec7; border-radius: 50%; }
-.geometry-ring::after { inset: 61px; background: #dce9db99; border-color: #91aa97; }
-.geometry-diamond { width: 108px; height: 108px; top: 122px; right: 256px; border: 1px solid; transform: translate(var(--pointer-x-reverse), var(--pointer-y-reverse)) rotate(45deg); }
-.geometry-line { width: 220px; height: 1px; right: 17px; bottom: 32px; background: #91adba; transform-origin: right center; transform: translate(var(--pointer-x), var(--pointer-y)) rotate(-28deg); }
-.geometry-dot { width: 12px; height: 12px; border-radius: 50%; background: #789caf; }
-.geometry-dot-one { top: 45px; right: 318px; transform: translate(var(--pointer-x-reverse), var(--pointer-y-reverse)); }
-.geometry-dot-two { right: 24px; bottom: 48px; width: 7px; height: 7px; background: #8da483; transform: translate(var(--pointer-x), var(--pointer-y)); }
+.hero-geometry { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: .78; }
 .eyebrow, .section-kicker { font-size: 11px; font-weight: 700; letter-spacing: .18em; }
 .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--coral); text-transform: uppercase; }
 .eyebrow-line { width: 28px; height: 1px; background: currentColor; }
@@ -158,7 +148,7 @@ h1 span { color: var(--coral); font-style: italic; white-space: nowrap; }
   .header-note { display: none; }
   .intro { padding: 45px 0 34px; min-height: auto; }
   .intro-stamp { display: none; }
-  .hero-geometry { left: 20%; opacity: .35; }
+  .hero-geometry { opacity: .48; }
   .intro p { font-size: 14px; }
   .section-heading { height: 62px; }
   #map { height: 440px; }
@@ -201,7 +191,6 @@ h1 span { color: var(--coral); font-style: italic; white-space: nowrap; }
 
 @media (pointer: coarse) {
   .hero-geometry { opacity: .38; }
-  .geometry-shape { transform: none !important; }
 }
 
 @media (pointer: coarse) {
