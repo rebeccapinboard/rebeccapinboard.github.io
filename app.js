@@ -122,6 +122,13 @@
         open.setAttribute("aria-label", `Open ${photo.title || `photograph ${index + 1}`} from ${place.name}`);
         open.addEventListener("click", () => openLightbox(photo, place));
         media.append(open);
+
+        if (place.name === "Japan") {
+          const caption = document.createElement("span");
+          caption.className = "japan-collage-caption";
+          caption.textContent = photo.title || `Japan · ${String(index + 1).padStart(2, "0")}`;
+          media.append(caption);
+        }
       }
 
       const trigger = document.createElement("button");

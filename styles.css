@@ -112,6 +112,7 @@ h1 span { color: var(--coral); font-style: italic; white-space: nowrap; }
 .collage-open::after { content: 'View'; position: absolute; right: 10px; bottom: 10px; padding: 6px 9px; background: rgba(255, 254, 250, .92); color: var(--coral-dark); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; opacity: 0; transform: translateY(4px); transition: opacity .18s ease, transform .18s ease; }
 .photo-card--collage:hover img { filter: brightness(1.1); transform: scale(1.02); }
 .photo-card--collage:hover .collage-open::after, .collage-open:focus-visible::after { opacity: 1; transform: translateY(0); }
+.japan-collage-caption { position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; padding: 26px 11px 9px; background: linear-gradient(transparent, rgba(18, 28, 33, .82)); color: white; font-size: 10px; font-weight: 600; line-height: 1.35; letter-spacing: .025em; pointer-events: none; }
 .photo-card-media { position: relative; display: block; width: 100%; overflow: hidden; background: #e8e6da; }
 .photo-card-media img { display: block; width: 100%; height: auto; transition: filter .2s ease, transform .25s ease; }
 .photo-card-media:hover img { filter: brightness(1.1); transform: scale(1.01); }
