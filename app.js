@@ -108,6 +108,7 @@
       img.alt = photo.alt || `Photograph ${index + 1} from ${place.name}`;
       img.loading = index < 2 ? "eager" : "lazy";
       media.append(img);
+      let collageCaption = null;
 
       if (usesCollage) {
         const setCollageShape = () => {
@@ -124,10 +125,14 @@
         media.append(open);
 
         if (place.name === "Japan") {
-          const caption = document.createElement("span");
-          caption.className = "japan-collage-caption";
-          caption.textContent = photo.title || `Japan · ${String(index + 1).padStart(2, "0")}`;
-          media.append(caption);
+          card.classList.add("has-caption");
+          collageCaption = document.createElement("div");
+          collageCaption.className = "japan-collage-caption";
+          const captionLocation = document.createElement("span");
+          captionLocation.textContent = `⌖ ${photo.location || place.name}`;
+          const captionTitle = document.createElement("strong");
+          captionTitle.textContent = photo.title || `Japan · ${String(index + 1).padStart(2, "0")}`;
+          collageCaption.append(captionLocation, captionTitle);
         }
       }
 
@@ -192,6 +197,7 @@
       bodyWrap.append(location, title);
       if (usesCollage) {
         card.append(media);
+        if (collageCaption) card.append(collageCaption);
       } else {
         card.append(media, panel, bodyWrap);
       }
