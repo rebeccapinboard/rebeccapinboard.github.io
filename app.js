@@ -1,6 +1,6 @@
 ﻿(async () => {
   let places = window.PLACES || [];
-  let isDemo = true;
+  let isDemo = false;
   if (window.pinboardDb.enabled) {
     try {
       const savedPlaces = await window.pinboardDb.loadPlaces();
@@ -29,7 +29,10 @@
   const worldMarkers = new Map();
 
   byId("place-total").textContent = `${places.length} ${places.length === 1 ? "place" : "places"} to explore`;
-  if (!isDemo) document.querySelector(".demo-note").hidden = true;
+  if (!isDemo) {
+    document.querySelector(".demo-note").hidden = true;
+    byId("mode-indicator").hidden = true;
+  }
 
   function refreshSelection() {
     list.querySelectorAll("button").forEach((button) => {
@@ -56,6 +59,7 @@
     place.photos.forEach((photo, index) => {
       const card = document.createElement("article");
       card.className = "photo-card";
+      card.id = `photo-${place.id}-${index}`;
       const media = document.createElement("div");
       media.className = "photo-card-media";
       const img = document.createElement("img");
@@ -134,11 +138,31 @@
     detailMarkers.clearLayers();
     const photosWithLocations = place.photos.filter((photo) => Array.isArray(photo.coordinates));
     if (photosWithLocations.length) {
+      const groups = new Map();
       photosWithLocations.forEach((photo) => {
+        const key = photo.locationId || `${photo.coordinates[0]},${photo.coordinates[1]}`;
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(photo);
+      });
+      groups.forEach((group) => {
+        const photo = group[0];
         const label = photo.location || place.name;
-        const popup = document.createElement("span");
-        popup.textContent = label;
-        L.marker(photo.coordinates, { title: label, alt: label, keyboard: true })
+        const count = group.length;
+        const icon = L.divIcon({
+          className: "detail-photo-marker-wrap",
+          html: `<span class="detail-photo-marker"><span>${count}</span><small>${count === 1 ? "photo" : "photos"}</small></span>`,
+          iconSize: [58, 58],
+          iconAnchor: [29, 29]
+        });
+        const popup = document.createElement("button");
+        popup.type = "button";
+        popup.className = "map-photo-link";
+        popup.textContent = `${label} · ${count} ${count === 1 ? "photo" : "photos"}`;
+        popup.addEventListener("click", () => {
+          const index = place.photos.indexOf(photo);
+          document.getElementById(`photo-${place.id}-${index}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+        L.marker(photo.coordinates, { icon, title: `${label}, ${count} photos`, alt: label, keyboard: true })
           .bindPopup(popup).addTo(detailMarkers);
       });
       const bounds = L.latLngBounds(photosWithLocations.map((photo) => photo.coordinates));
