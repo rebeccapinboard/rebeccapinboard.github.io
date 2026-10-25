@@ -23,10 +23,30 @@
   const list = byId("country-list");
   const detail = byId("country-detail");
   const photoGrid = byId("photo-grid");
+  const lightbox = byId("photo-lightbox");
+  const lightboxImage = byId("lightbox-image");
+  const lightboxTitle = byId("lightbox-title");
+  const lightboxLocation = byId("lightbox-location");
+  const lightboxDescription = byId("lightbox-description");
   let activePlace = null;
   let detailMap = null;
   let detailMarkers = null;
   const worldMarkers = new Map();
+
+  function openLightbox(photo, place) {
+    lightboxImage.src = photo.src;
+    lightboxImage.alt = photo.alt || photo.title || `Photograph from ${place.name}`;
+    lightboxTitle.textContent = photo.title || place.name;
+    lightboxLocation.textContent = `⌖ ${photo.location || place.name}`;
+    lightboxDescription.textContent = photo.description || "Rebecca's description and photography techniques will go here.";
+    lightbox.showModal();
+    byId("lightbox-close").focus();
+  }
+
+  byId("lightbox-close").addEventListener("click", () => lightbox.close());
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
 
   byId("place-total").textContent = `${places.length} ${places.length === 1 ? "place" : "places"} to explore`;
   if (!isDemo) {
@@ -47,6 +67,8 @@
 
   function renderPhotos(place) {
     photoGrid.replaceChildren();
+    const usesCollage = place.name === "China" || place.name === "Japan";
+    photoGrid.classList.toggle("photo-grid--collage", usesCollage);
     byId("detail-photo-count").textContent = `${place.photos.length} ${place.photos.length === 1 ? "photograph" : "photographs"}`;
     if (!place.photos.length) {
       const empty = document.createElement("p");
@@ -59,6 +81,7 @@
     place.photos.forEach((photo, index) => {
       const card = document.createElement("article");
       card.className = "photo-card";
+      if (usesCollage) card.classList.add("photo-card--collage");
       card.id = `photo-${place.id}-${index}`;
       const media = document.createElement("div");
       media.className = "photo-card-media";
@@ -68,13 +91,22 @@
       img.loading = index < 2 ? "eager" : "lazy";
       media.append(img);
 
+      if (usesCollage) {
+        const open = document.createElement("button");
+        open.type = "button";
+        open.className = "collage-open";
+        open.setAttribute("aria-label", `Open ${photo.title || `photograph ${index + 1}`} from ${place.name}`);
+        open.addEventListener("click", () => openLightbox(photo, place));
+        media.append(open);
+      }
+
       const trigger = document.createElement("button");
       trigger.type = "button";
       trigger.className = "photo-info";
       trigger.textContent = "i";
       trigger.setAttribute("aria-expanded", "false");
       trigger.setAttribute("aria-label", `Open description for ${photo.title || photo.alt || place.name}`);
-      media.append(trigger);
+      if (!usesCollage) media.append(trigger);
 
       if (photo.sample !== false && isDemo) {
         const tag = document.createElement("span");
@@ -127,7 +159,11 @@
       title.className = "photo-card-title";
       title.textContent = photo.title || `${place.name} · ${String(index + 1).padStart(2, "0")}`;
       bodyWrap.append(location, title);
-      card.append(media, panel, bodyWrap);
+      if (usesCollage) {
+        card.append(media);
+      } else {
+        card.append(media, panel, bodyWrap);
+      }
       photoGrid.append(card);
     });
   }
