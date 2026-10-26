@@ -25,7 +25,6 @@
   const photoGrid = byId("photo-grid");
   const lightbox = byId("photo-lightbox");
   const lightboxImage = byId("lightbox-image");
-  const lightboxTitle = byId("lightbox-title");
   const lightboxLocation = byId("lightbox-location");
   const lightboxDescription = byId("lightbox-description");
   const lightboxPrevious = byId("lightbox-previous");
@@ -220,8 +219,6 @@
       panel.id = `photo-notes-${place.id}-${index}`;
       panel.hidden = true;
       trigger.setAttribute("aria-controls", panel.id);
-      const label = document.createElement("strong");
-      label.textContent = "Technique notes";
       const body = document.createElement("ul");
       body.className = "technique-list";
       techniquePoints(photo).forEach((point) => {
@@ -233,7 +230,7 @@
       close.type = "button";
       close.className = "photo-description-close";
       close.textContent = "Close";
-      panel.append(label, body, close);
+      panel.append(body, close);
 
       const setOpen = (open) => {
         card.classList.toggle("is-open", open);

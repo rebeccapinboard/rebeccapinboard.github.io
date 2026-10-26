@@ -11,12 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261026-1" />
+    <link rel="stylesheet" href="styles.css?v=20261026-2" />
     <script defer src="vendor/leaflet/leaflet.js?v=20261025-3"></script>
     <script defer src="config.js?v=20261025-3"></script>
     <script defer src="db.js?v=20261025-3"></script>
     <script defer src="places.js?v=20261025-6"></script>
-    <script defer src="app.js?v=20261026-1"></script>
+    <script defer src="app.js?v=20261026-2"></script>
   </head>
   <body>
     <div class="page-shell">
@@ -82,16 +82,14 @@
 
       <footer class="site-footer"><span>Rebecca's Pinboard <span aria-hidden="true">✳</span></span><span>Made for all the places worth remembering.</span></footer>
     </div>
-    <dialog class="photo-lightbox" id="photo-lightbox" aria-labelledby="lightbox-title">
+    <dialog class="photo-lightbox" id="photo-lightbox" aria-label="Photograph details">
       <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close photograph">&times;</button>
       <button class="lightbox-arrow lightbox-arrow--previous" id="lightbox-previous" type="button" aria-label="Previous photograph">&larr;</button>
       <button class="lightbox-arrow lightbox-arrow--next" id="lightbox-next" type="button" aria-label="Next photograph">&rarr;</button>
       <div class="lightbox-layout">
         <div class="lightbox-image-wrap"><img id="lightbox-image" alt="" /></div>
         <div class="lightbox-copy">
-          <span class="section-kicker">PHOTOGRAPH &amp; NOTES</span>
           <p class="lightbox-location" id="lightbox-location"></p>
-          <h2 id="lightbox-title">Technique notes</h2>
           <ul class="technique-list" id="lightbox-description"></ul>
         </div>
       </div>
