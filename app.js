@@ -28,6 +28,10 @@
   const lightboxTitle = byId("lightbox-title");
   const lightboxLocation = byId("lightbox-location");
   const lightboxDescription = byId("lightbox-description");
+  const lightboxPrevious = byId("lightbox-previous");
+  const lightboxNext = byId("lightbox-next");
+  let lightboxPhotos = [];
+  let lightboxPhotoIndex = 0;
   let activePlace = null;
   let detailMap = null;
   let detailMarkers = null;
@@ -51,17 +55,70 @@
     });
   }
 
-  function openLightbox(photo, place) {
+  function techniquePoints(photo) {
+    const description = (photo.description || "").toLowerCase();
+    const rules = [
+      [/low angle|low viewpoint|looked? (sharply )?up|steep perspective/, "Low-angle perspective emphasizes height and scale."],
+      [/symmetr|centred|centered/, "A centred composition creates symmetry and visual stability."],
+      [/leading line|converg|guide.*eye|pull.*eye|draw.*eye/, "Leading lines guide the viewer through the frame."],
+      [/foreground|layer|depth/, "Foreground, middle ground, and background create a stronger sense of depth."],
+      [/repeat|rhythm|pattern/, "Repeated forms establish rhythm across the composition."],
+      [/side light|directional light|sunlight|warm light|golden|glow|shadow/, "Directional natural light adds contrast, texture, and mood."],
+      [/silhouette/, "Silhouettes create clear shapes and stronger tonal contrast."],
+      [/fram(e|ing|ed)/, "Natural framing directs attention toward the main subject."],
+      [/reflection|reflect/, "Reflections add balance and a second visual layer."],
+      [/negative space|open water|breathing room|clean background|blue sky/, "Negative space keeps the composition clear and gives the subject room."],
+      [/colour|color|vivid|saturation/, "Colour contrast separates key elements and strengthens the mood."],
+      [/close|detail|texture/, "Close framing draws attention to texture and fine detail."],
+      [/diagonal|angled|angle/, "Diagonal lines add depth and movement to the frame."],
+      [/perspective|scale/, "Perspective establishes scale and spatial depth."],
+      [/focus|blur|depth of field/, "Selective focus separates the subject from its surroundings."]
+    ];
+    const points = rules.filter(([pattern]) => pattern.test(description)).map(([, point]) => point);
+    return [...new Set(points)].slice(0, 3).length
+      ? [...new Set(points)].slice(0, 3)
+      : ["The framing balances the subject with its surroundings.", "Light and perspective create visual depth."];
+  }
+
+  function showLightboxPhoto(photo, place) {
     lightboxImage.src = photo.src;
     lightboxImage.alt = photo.alt || photo.title || `Photograph from ${place.name}`;
-    lightboxTitle.textContent = photo.title || place.name;
     lightboxLocation.textContent = `⌖ ${photo.location || place.name}`;
-    lightboxDescription.textContent = photo.description || "Rebecca's description and photography techniques will go here.";
-    lightbox.showModal();
+    lightboxDescription.replaceChildren(...techniquePoints(photo).map((point) => {
+      const item = document.createElement("li");
+      item.textContent = point;
+      return item;
+    }));
+    const hasMultiple = lightboxPhotos.length > 1;
+    lightboxPrevious.hidden = !hasMultiple;
+    lightboxNext.hidden = !hasMultiple;
+  }
+
+  function openLightbox(photo, place) {
+    const locationKey = photo.locationId || photo.location || place.id;
+    lightboxPhotos = place.photos.filter((candidate) => (candidate.locationId || candidate.location || place.id) === locationKey);
+    if (!lightboxPhotos.length) lightboxPhotos = [photo];
+    lightboxPhotoIndex = Math.max(0, lightboxPhotos.indexOf(photo));
+    lightbox.dataset.placeId = place.id;
+    showLightboxPhoto(lightboxPhotos[lightboxPhotoIndex], place);
+    if (!lightbox.open) lightbox.showModal();
     byId("lightbox-close").focus();
   }
 
+  function moveLightbox(direction) {
+    if (lightboxPhotos.length < 2) return;
+    lightboxPhotoIndex = (lightboxPhotoIndex + direction + lightboxPhotos.length) % lightboxPhotos.length;
+    const place = places.find((candidate) => candidate.id === lightbox.dataset.placeId) || activePlace;
+    showLightboxPhoto(lightboxPhotos[lightboxPhotoIndex], place);
+  }
+
   byId("lightbox-close").addEventListener("click", () => lightbox.close());
+  lightboxPrevious.addEventListener("click", () => moveLightbox(-1));
+  lightboxNext.addEventListener("click", () => moveLightbox(1));
+  lightbox.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") moveLightbox(-1);
+    if (event.key === "ArrowRight") moveLightbox(1);
+  });
   lightbox.addEventListener("click", (event) => {
     if (event.target === lightbox) lightbox.close();
   });
@@ -85,7 +142,7 @@
 
   function renderPhotos(place) {
     photoGrid.replaceChildren();
-    const usesCollage = place.name === "China" || place.name === "Japan";
+    const usesCollage = false;
     photoGrid.classList.toggle("photo-grid--collage", usesCollage);
     byId("detail-photo-count").textContent = `${place.photos.length} ${place.photos.length === 1 ? "photograph" : "photographs"}`;
     if (!place.photos.length) {
@@ -109,6 +166,13 @@
       img.loading = index < 2 ? "eager" : "lazy";
       media.append(img);
       let collageCaption = null;
+
+      const imageOpen = document.createElement("button");
+      imageOpen.type = "button";
+      imageOpen.className = "photo-open";
+      imageOpen.setAttribute("aria-label", `Open photograph from ${photo.location || place.name}`);
+      imageOpen.addEventListener("click", () => openLightbox(photo, place));
+      media.append(imageOpen);
 
       if (usesCollage) {
         const setCollageShape = () => {
@@ -157,9 +221,14 @@
       panel.hidden = true;
       trigger.setAttribute("aria-controls", panel.id);
       const label = document.createElement("strong");
-      label.textContent = "About this photograph";
-      const body = document.createElement("p");
-      body.textContent = photo.description || "Rebecca's description and photography techniques will go here.";
+      label.textContent = "Technique notes";
+      const body = document.createElement("ul");
+      body.className = "technique-list";
+      techniquePoints(photo).forEach((point) => {
+        const item = document.createElement("li");
+        item.textContent = point;
+        body.append(item);
+      });
       const close = document.createElement("button");
       close.type = "button";
       close.className = "photo-description-close";
@@ -191,10 +260,7 @@
           byId("detail-map").scrollIntoView({ behavior: "smooth", block: "center" });
         }
       });
-      const title = document.createElement("h3");
-      title.className = "photo-card-title";
-      title.textContent = photo.title || `${place.name} · ${String(index + 1).padStart(2, "0")}`;
-      bodyWrap.append(location, title);
+      bodyWrap.append(location);
       if (usesCollage) {
         card.append(media);
         if (collageCaption) card.append(collageCaption);
@@ -242,14 +308,7 @@
         popup.type = "button";
         popup.className = "map-photo-link";
         popup.textContent = `${label} · ${count} ${count === 1 ? "photo" : "photos"}`;
-        popup.addEventListener("click", () => {
-          if (place.name === "China" || place.name === "Japan") {
-            openLightbox(photo, place);
-          } else {
-            const index = place.photos.indexOf(photo);
-            document.getElementById(`photo-${place.id}-${index}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
-          }
-        });
+        popup.addEventListener("click", () => openLightbox(photo, place));
         L.marker(photo.coordinates, { icon, title: `${label}, ${count} photos`, alt: label, keyboard: true })
           .bindPopup(popup).addTo(detailMarkers);
       });
