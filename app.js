@@ -55,28 +55,10 @@
   }
 
   function techniquePoints(photo) {
-    const description = (photo.description || "").toLowerCase();
-    const rules = [
-      [/low angle|low viewpoint|looked? (sharply )?up|steep perspective/, "Low-angle perspective emphasizes height and scale."],
-      [/symmetr|centred|centered/, "A centred composition creates symmetry and visual stability."],
-      [/leading line|converg|guide.*eye|pull.*eye|draw.*eye/, "Leading lines guide the viewer through the frame."],
-      [/foreground|layer|depth/, "Foreground, middle ground, and background create a stronger sense of depth."],
-      [/repeat|rhythm|pattern/, "Repeated forms establish rhythm across the composition."],
-      [/side light|directional light|sunlight|warm light|golden|glow|shadow/, "Directional natural light adds contrast, texture, and mood."],
-      [/silhouette/, "Silhouettes create clear shapes and stronger tonal contrast."],
-      [/fram(e|ing|ed)/, "Natural framing directs attention toward the main subject."],
-      [/reflection|reflect/, "Reflections add balance and a second visual layer."],
-      [/negative space|open water|breathing room|clean background|blue sky/, "Negative space keeps the composition clear and gives the subject room."],
-      [/colour|color|vivid|saturation/, "Colour contrast separates key elements and strengthens the mood."],
-      [/close|detail|texture/, "Close framing draws attention to texture and fine detail."],
-      [/diagonal|angled|angle/, "Diagonal lines add depth and movement to the frame."],
-      [/perspective|scale/, "Perspective establishes scale and spatial depth."],
-      [/focus|blur|depth of field/, "Selective focus separates the subject from its surroundings."]
-    ];
-    const points = rules.filter(([pattern]) => pattern.test(description)).map(([, point]) => point);
-    return [...new Set(points)].slice(0, 3).length
-      ? [...new Set(points)].slice(0, 3)
-      : ["The framing balances the subject with its surroundings.", "Light and perspective create visual depth."];
+    return (photo.description || "A closer look at the framing and light in this photograph.")
+      .split("\n")
+      .map((point) => point.trim())
+      .filter(Boolean);
   }
 
   function showLightboxPhoto(photo, place) {
