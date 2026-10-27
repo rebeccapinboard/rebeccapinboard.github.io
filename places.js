@@ -12,6 +12,19 @@ window.PLACES = [
     "description": "Sunlit squares, quiet canals, and close studies of Italy's remarkable architecture.",
     "photos": [
       {
+        "src": "images/travel/italy/new-01-palatine-blossoms.webp",
+        "alt": "Sunlight passes through pink blossoms and dark branches on the Palatine Hill.",
+        "title": "Palatine Hill, Rome",
+        "location": "Palatine Hill, Rome",
+        "locationId": "palatine-hill-rome",
+        "coordinates": [
+          41.8895,
+          12.4876
+        ],
+        "description": "I let the sunlight burn through the blossoms rather than trying to hold every detail in the sky.\nThe dark branches give the soft pink flowers a stronger outline.",
+        "sample": false
+      },
+      {
         "src": "images/travel/italy/05-lucca-italy1-jpeg.webp",
         "alt": "I stopped beneath a sculptural, leafless tree beside Lucca's city walls.",
         "title": "The Lucca tree",
@@ -139,6 +152,162 @@ window.PLACES = [
           12.36
         ],
         "description": "I gave the lagoon most of the frame and kept the island low on the horizon.\nThe open blue water makes the distant red roofs feel quiet and far away.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-02-roman-forum-overlook.webp",
+        "alt": "Roman Forum ruins seen from above beneath a clear blue sky.",
+        "title": "Roman Forum, Rome",
+        "location": "Roman Forum, Rome",
+        "locationId": "roman-forum-rome",
+        "coordinates": [
+          41.8925,
+          12.4853
+        ],
+        "description": "I took this from above so the columns and broken walls could overlap across the frame.\nThe open sky keeps the busy ruins from feeling too crowded.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-03-rome-at-night.webp",
+        "alt": "A stone monument in the foreground of a nighttime Rome skyline.",
+        "title": "Rome, Lazio",
+        "location": "Rome, Lazio",
+        "locationId": "rome-centre",
+        "coordinates": [
+          41.899,
+          12.477
+        ],
+        "description": "The pale stone in front catches the light first, while the distant dome is much quieter.\nI like how the black sky leaves space between those two parts of the photograph.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-04-colosseum-through-trees.webp",
+        "alt": "The Colosseum framed by bare branches under blue sky.",
+        "title": "Colosseum, Rome",
+        "location": "Colosseum, Rome",
+        "locationId": "colosseum-rome",
+        "coordinates": [
+          41.8902,
+          12.4922
+        ],
+        "description": "I kept the bare branches in front of the Colosseum instead of moving to a clear view.\nThey break up the sky and make the building feel part of the street around it.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-05-colosseum-street.webp",
+        "alt": "Side view of the Colosseum with people and trees in the street.",
+        "title": "Colosseum, Rome",
+        "location": "Colosseum, Rome",
+        "locationId": "colosseum-rome",
+        "coordinates": [
+          41.8902,
+          12.4922
+        ],
+        "description": "The people at street level help show how large the Colosseum is.\nI left the trees in the frame to soften the long curve of stone.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-06-roman-ruins.webp",
+        "alt": "Weathered stone walls at the Roman Forum against the sky.",
+        "title": "Roman Forum, Rome",
+        "location": "Roman Forum, Rome",
+        "locationId": "roman-forum-rome",
+        "coordinates": [
+          41.8925,
+          12.4853
+        ],
+        "description": "I came in close enough to see the rough edges of the old walls.\nThe blue gap above them stops all that stone from merging into one shape.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-07-trevi-fountain-wide.webp",
+        "alt": "Full view of the Trevi Fountain facade and turquoise water.",
+        "title": "Trevi Fountain, Rome",
+        "location": "Trevi Fountain, Rome",
+        "locationId": "trevi-fountain-rome",
+        "coordinates": [
+          41.9008,
+          12.4831
+        ],
+        "description": "I kept the whole facade in the frame so the figures and columns could be read together.\nThe water adds a cool colour beneath all the pale stone.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-08-trevi-fountain-water.webp",
+        "alt": "Closer view of the Trevi Fountain and its turquoise pool.",
+        "title": "Trevi Fountain, Rome",
+        "location": "Trevi Fountain, Rome",
+        "locationId": "trevi-fountain-rome",
+        "coordinates": [
+          41.9008,
+          12.4831
+        ],
+        "description": "I moved closer to give the water more space in this version.\nIts colour makes the carved stone feel brighter.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-09-vatican-gilded-ceiling.webp",
+        "alt": "Gilded ceiling and sculpted details inside the Vatican Museums.",
+        "title": "Vatican Museums, Vatican City",
+        "location": "Vatican Museums, Vatican City",
+        "locationId": "vatican-museums",
+        "coordinates": [
+          41.9065,
+          12.4536
+        ],
+        "description": "I pointed straight up to let the repeated frames lead toward the centre.\nThe warm gold stands out against the cooler stone around it.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-10-rome-painted-ceiling.webp",
+        "alt": "Ornate painted ceiling with detailed panels in Rome.",
+        "title": "Rome, Lazio",
+        "location": "Rome, Lazio",
+        "locationId": "rome-centre",
+        "coordinates": [
+          41.902,
+          12.465
+        ],
+        "description": "There was so much detail overhead that I let the architecture make its own border.\nThe brighter centre draws my eye through the darker edges.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-11-st-peters-square.webp",
+        "alt": "St. Peter’s Basilica photographed from a low angle in the square.",
+        "title": "St. Peter’s Square, Vatican City",
+        "location": "St. Peter’s Square, Vatican City",
+        "locationId": "st-peters-square",
+        "coordinates": [
+          41.9022,
+          12.4572
+        ],
+        "description": "I aimed upward so the columns and facade rise into the open sky.\nThe low viewpoint makes the building feel especially tall.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-12-castel-santangelo-angel.webp",
+        "alt": "Angel statue on Castel Sant’Angelo against the sky.",
+        "title": "Castel Sant’Angelo, Rome",
+        "location": "Castel Sant’Angelo, Rome",
+        "locationId": "castel-santangelo-rome",
+        "coordinates": [
+          41.9031,
+          12.4663
+        ],
+        "description": "I isolated the angel against the sky, where its wings are easiest to see.\nThe darker stone below gives the figure a solid base.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/italy/new-13-castel-santangelo-ceiling.webp",
+        "alt": "Decorated ceiling inside Castel Sant’Angelo.",
+        "title": "Castel Sant’Angelo, Rome",
+        "location": "Castel Sant’Angelo, Rome",
+        "locationId": "castel-santangelo-rome",
+        "coordinates": [
+          41.9031,
+          12.4663
+        ],
+        "description": "The repeating ceiling panels pulled my eye upward.\nI kept the edges in view so the gilded details still have a sense of scale.",
         "sample": false
       }
     ]
@@ -400,6 +569,110 @@ window.PLACES = [
         ],
         "description": "I used the tree canopy to shade the top of the cathedral view.\nThe small figures on the path give the stone building a human scale.",
         "sample": false
+      },
+      {
+        "src": "images/travel/australia/new-15-melbourne-university-welcome.webp",
+        "alt": "Wominjeka welcome sign among trees at the University of Melbourne.",
+        "title": "University of Melbourne",
+        "location": "University of Melbourne",
+        "locationId": "university-of-melbourne",
+        "coordinates": [
+          -37.7963,
+          144.9614
+        ],
+        "description": "The sign sits underneath a canopy of green rather than against a blank wall.\nI like the way the branches make the entrance feel open.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/australia/new-17-sydney-harbour-luna-park.webp",
+        "alt": "Sydney skyline and Luna Park viewed across the harbour.",
+        "title": "Sydney Harbour",
+        "location": "Sydney Harbour",
+        "locationId": "sydney-harbour",
+        "coordinates": [
+          -33.848,
+          151.209
+        ],
+        "description": "I kept the water between me and the skyline to give the buildings some breathing room.\nLuna Park adds a small burst of colour at the edge.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/australia/new-19-sydney-luna-park-view.webp",
+        "alt": "Luna Park and Sydney skyline seen past a foreground railing.",
+        "title": "Sydney Harbour",
+        "location": "Sydney Harbour",
+        "locationId": "sydney-harbour",
+        "coordinates": [
+          -33.848,
+          151.209
+        ],
+        "description": "The railing in front makes the view feel like a moment caught along the way.\nIt also creates a second layer before the harbour and buildings.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/australia/new-23-williamstown-palms.webp",
+        "alt": "Palm trees and a low seaside building in Williamstown.",
+        "title": "Williamstown, Victoria",
+        "location": "Williamstown, Victoria",
+        "locationId": "williamstown-victoria",
+        "coordinates": [
+          -37.862,
+          144.9
+        ],
+        "description": "The palms split the bright sky into smaller shapes.\nI kept the low building in view so the trees still feel connected to the waterfront.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/australia/new-32-cowes-window-sea.webp",
+        "alt": "Blue sea viewed through a window in Cowes, Victoria.",
+        "title": "Cowes, Victoria",
+        "location": "Cowes, Victoria",
+        "locationId": "cowes-victoria",
+        "coordinates": [
+          -38.45,
+          145.237
+        ],
+        "description": "The window frame makes the sea feel like a picture within the picture.\nI kept the indoor edge visible because it changes the mood of the view.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/australia/new-39-sydney-bridge-street-night.webp",
+        "alt": "Sandstone building lit at night on Bridge Street, Sydney.",
+        "title": "Bridge Street, Sydney",
+        "location": "Bridge Street, Sydney",
+        "locationId": "bridge-street-sydney",
+        "coordinates": [
+          -33.8635,
+          151.2075
+        ],
+        "description": "The warm lighting brings out the edges of the sandstone against the dark sky.\nI aimed upward to keep the street clutter below out of the frame.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/australia/new-41-melbourne-university-arch.webp",
+        "alt": "Gothic stone arch framing a bright courtyard at the University of Melbourne.",
+        "title": "University of Melbourne",
+        "location": "University of Melbourne",
+        "locationId": "university-of-melbourne",
+        "coordinates": [
+          -37.7963,
+          144.9614
+        ],
+        "description": "I used the dark arch to frame the bright courtyard beyond it.\nThe pointed shape pulls the eye up before it goes through to the tree.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/australia/new-51-williamstown-rocky-shore.webp",
+        "alt": "Rocky shallows and blue horizon at Williamstown.",
+        "title": "Williamstown, Victoria",
+        "location": "Williamstown, Victoria",
+        "locationId": "williamstown-victoria",
+        "coordinates": [
+          -37.862,
+          144.9
+        ],
+        "description": "I left a lot of open sky above the rocks and water.\nThe low horizon makes the shoreline feel especially wide and quiet.",
+        "sample": false
       }
     ]
   },
@@ -529,6 +802,318 @@ window.PLACES = [
           106.5516
         ],
         "description": "I let the trees make a dark frame around the blue-lit bus and street.\nKeeping the night shadows deep makes those cooler lights stand out.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-14-anqing-street.webp",
+        "alt": "Old street building with Chinese calligraphy in Yingjiang, Anqing.",
+        "title": "Yingjiang, Anqing",
+        "location": "Yingjiang, Anqing",
+        "locationId": "yingjiang-anqing",
+        "coordinates": [
+          30.5066,
+          117.0611
+        ],
+        "description": "I kept the writing and the building together because both give the street its character.\nThe vertical frame follows the height of the facade.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-16-shanghai-towers.webp",
+        "alt": "Shanghai skyscrapers photographed from below against the sky.",
+        "title": "Lujiazui, Shanghai",
+        "location": "Lujiazui, Shanghai",
+        "locationId": "lujiazui-shanghai",
+        "coordinates": [
+          31.2354,
+          121.505
+        ],
+        "description": "I looked up between the towers so their lines pull toward the same patch of sky.\nThe vertical frame lets their height do most of the work.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-18-shanghai-museum-pottery.webp",
+        "alt": "Ancient pottery displayed under spotlights at Shanghai Museum.",
+        "title": "Shanghai Museum",
+        "location": "Shanghai Museum",
+        "locationId": "shanghai-museum",
+        "coordinates": [
+          31.2304,
+          121.4737
+        ],
+        "description": "The case lighting picks out the shapes of the vessels against a dark background.\nI left a little space around each one so they do not blend together.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-20-shanghai-disney-street.webp",
+        "alt": "Colourful themed street and green lamp at Shanghai Disneyland.",
+        "title": "Shanghai Disneyland",
+        "location": "Shanghai Disneyland",
+        "locationId": "shanghai-disneyland",
+        "coordinates": [
+          31.144,
+          121.658
+        ],
+        "description": "I included the lamp close to the camera to give the busy street a clear starting point.\nThe colours and people carry the eye farther into the scene.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-21-pengze-dreamy-road.webp",
+        "alt": "Curving road through sunlit trees in Pengze, Jiujiang.",
+        "title": "Pengze, Jiujiang",
+        "location": "Pengze, Jiujiang",
+        "locationId": "pengze-jiujiang",
+        "coordinates": [
+          29.898,
+          116.549
+        ],
+        "description": "I like how the bright exposure washes the distance into a soft haze.\nThe road stays dark enough to guide the eye through that dreamy light.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-24-shanghai-garden-koi.webp",
+        "alt": "Colourful koi near the surface of a green pond in Shanghai.",
+        "title": "A garden in Shanghai",
+        "location": "A garden in Shanghai",
+        "locationId": "shanghai-garden",
+        "coordinates": [
+          31.2,
+          121.48
+        ],
+        "description": "I pointed down and waited for the fish to bunch together near the surface.\nTheir orange and white shapes are especially clear against the green water.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-25-disney-pooh-shelves.webp",
+        "alt": "Rows of Winnie the Pooh plush toys at Shanghai Disneyland.",
+        "title": "Shanghai Disneyland",
+        "location": "Shanghai Disneyland",
+        "locationId": "shanghai-disneyland",
+        "coordinates": [
+          31.144,
+          121.658
+        ],
+        "description": "The repeated yellow faces make a pattern before I notice any single toy.\nI kept the shelves straight so that repetition stays tidy.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-26-disney-castle-night.webp",
+        "alt": "Disney castle glowing purple against a dark Shanghai night.",
+        "title": "Shanghai Disneyland",
+        "location": "Shanghai Disneyland",
+        "locationId": "shanghai-disneyland",
+        "coordinates": [
+          31.144,
+          121.658
+        ],
+        "description": "I exposed for the lit castle and let the sky fall almost black.\nThat makes the purple light feel much stronger.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-29-xiamen-heart-sign.webp",
+        "alt": "Red I love Xiamen sign in front of older city buildings.",
+        "title": "Xiamen, Fujian",
+        "location": "Xiamen, Fujian",
+        "locationId": "xiamen",
+        "coordinates": [
+          24.4798,
+          118.0894
+        ],
+        "description": "The red heart caught my eye first, so I let it anchor the frame.\nThe older buildings behind it give the sign a sense of place.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-30-disney-indoor-ride.webp",
+        "alt": "Colourful indoor ride scenery at Shanghai Disneyland.",
+        "title": "Shanghai Disneyland",
+        "location": "Shanghai Disneyland",
+        "locationId": "shanghai-disneyland",
+        "coordinates": [
+          31.144,
+          121.658
+        ],
+        "description": "The bright shapes pop out of the darker ride space.\nI kept a bit of the surrounding darkness so the lights still feel theatrical.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-33-lushan-gate.webp",
+        "alt": "Traditional gate and distant gold statue in Lushan, Jiujiang.",
+        "title": "Lushan, Jiujiang",
+        "location": "Lushan, Jiujiang",
+        "locationId": "lushan-jiujiang",
+        "coordinates": [
+          29.57,
+          115.97
+        ],
+        "description": "The gate fills the foreground while the gold figure sits farther back on the hill.\nI like how those two layers give the street a destination.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-34-shanghai-garden-dog.webp",
+        "alt": "White dog on a lawn with bubbles floating around it in Shanghai.",
+        "title": "A garden in Shanghai",
+        "location": "A garden in Shanghai",
+        "locationId": "shanghai-garden",
+        "coordinates": [
+          31.2,
+          121.48
+        ],
+        "description": "The bubbles caught the light around the dog for a moment.\nI stayed low enough for the grass to fill the foreground.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-35-nanxun-boat.webp",
+        "alt": "Covered boat, red lanterns and reflections at Nanxun Ancient Town.",
+        "title": "Nanxun Ancient Town",
+        "location": "Nanxun Ancient Town",
+        "locationId": "nanxun-ancient-town",
+        "coordinates": [
+          30.877,
+          120.424
+        ],
+        "description": "I included the reflection so the boat and lanterns almost repeat below the waterline.\nThe still surface makes the whole scene feel calm.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-36-disney-castle-dusk.webp",
+        "alt": "Pink Disney castle at dusk with lamps in the foreground.",
+        "title": "Shanghai Disneyland",
+        "location": "Shanghai Disneyland",
+        "locationId": "shanghai-disneyland",
+        "coordinates": [
+          31.144,
+          121.658
+        ],
+        "description": "The lamps in front give the castle a little depth instead of leaving it alone against the sky.\nDusk keeps both the pink light and the remaining blue visible.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-37-disney-colourful-street.webp",
+        "alt": "Colourful themed street with a giraffe sign at Shanghai Disneyland.",
+        "title": "Shanghai Disneyland",
+        "location": "Shanghai Disneyland",
+        "locationId": "shanghai-disneyland",
+        "coordinates": [
+          31.144,
+          121.658
+        ],
+        "description": "There are a lot of signs and colours here, so I used the street to pull them into one view.\nThe people below give the oversized details their scale.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-38-pengze-cave.webp",
+        "alt": "Cave formations illuminated with magenta light in Pengze.",
+        "title": "Pengze, Jiujiang",
+        "location": "Pengze, Jiujiang",
+        "locationId": "pengze-jiujiang",
+        "coordinates": [
+          29.898,
+          116.549
+        ],
+        "description": "The coloured light exaggerates every ridge in the rock.\nI left some deep shadow between the formations so they keep their separate shapes.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-40-shanghai-museum-fish-vase.webp",
+        "alt": "White porcelain vessel with red fish decoration in Shanghai Museum.",
+        "title": "Shanghai Museum",
+        "location": "Shanghai Museum",
+        "locationId": "shanghai-museum",
+        "coordinates": [
+          31.2304,
+          121.4737
+        ],
+        "description": "I kept the vase centred so its shape and painted fish are easy to read.\nThe plain museum background lets those small red details stand out.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-42-shanghai-window-flowers.webp",
+        "alt": "Flowers on a windowsill with Shanghai buildings at dusk.",
+        "title": "Jinxiu Road, Shanghai",
+        "location": "Jinxiu Road, Shanghai",
+        "locationId": "jinxiu-road-shanghai",
+        "coordinates": [
+          31.174,
+          121.56
+        ],
+        "description": "The flowers are close and sharp while the city outside sits farther away.\nI like that quiet contrast between the room and the evening view.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-43-jingting-mountain-cat.webp",
+        "alt": "Orange cat on a stone path beneath pink blossoms at Jingting Mountain.",
+        "title": "Jingting Mountain, Xuancheng",
+        "location": "Jingting Mountain, Xuancheng",
+        "locationId": "jingting-mountain",
+        "coordinates": [
+          30.963,
+          118.73
+        ],
+        "description": "I caught the cat mid-walk and left the path ahead of it in the frame.\nThe pink blossoms soften the hard grey stone.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-44-shanghai-museum-green-vase.webp",
+        "alt": "Green and white decorated porcelain vase in Shanghai Museum.",
+        "title": "Shanghai Museum",
+        "location": "Shanghai Museum",
+        "locationId": "shanghai-museum",
+        "coordinates": [
+          31.2304,
+          121.4737
+        ],
+        "description": "The dark case makes the pale pattern on the vase easier to see.\nI kept it upright and centred so the curved outline stays clear.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-45-jiujiang-night-pagoda.webp",
+        "alt": "Illuminated pagoda against a black night sky in Jiujiang.",
+        "title": "Xunyang, Jiujiang",
+        "location": "Xunyang, Jiujiang",
+        "locationId": "xunyang-jiujiang",
+        "coordinates": [
+          29.73,
+          115.99
+        ],
+        "description": "I exposed for the pagoda lights and let everything around it disappear into black.\nEach tier then reads as its own bright line.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-52-yingjiang-temple-pagoda.webp",
+        "alt": "Yingjiang Temple pagoda with strings of colourful flags overhead.",
+        "title": "Yingjiang Temple, Anqing",
+        "location": "Yingjiang Temple, Anqing",
+        "locationId": "yingjiang-temple-anqing",
+        "coordinates": [
+          30.5066,
+          117.0611
+        ],
+        "description": "I looked straight up so the flags radiate around the pagoda.\nTheir colour breaks up the pale sky and leads back to the tower.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-53-shanghai-garden-red-maple.webp",
+        "alt": "Deep red maple leaves against a pale wall in Shanghai.",
+        "title": "A garden in Shanghai",
+        "location": "A garden in Shanghai",
+        "locationId": "shanghai-garden",
+        "coordinates": [
+          31.2,
+          121.48
+        ],
+        "description": "I moved close enough for the red leaves to fill most of the frame.\nThe pale wall behind them keeps their edges easy to see.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/china/new-54-nanxun-willow-pond.webp",
+        "alt": "Willow branches and waterside pavilion reflected in Nanxun pond.",
+        "title": "Nanxun Ancient Town",
+        "location": "Nanxun Ancient Town",
+        "locationId": "nanxun-ancient-town",
+        "coordinates": [
+          30.877,
+          120.424
+        ],
+        "description": "The willow branches hang into the frame and make the pavilion feel tucked away.\nI included the water reflection to give the quiet scene another layer.",
         "sample": false
       }
     ]
@@ -685,6 +1270,123 @@ window.PLACES = [
           135.8484
         ],
         "description": "I left room around the deer so the orange leaves and little bridge could share the frame.\nThe warm colours feel strongest against the darker trees behind them.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/new-22-kyoto-wet-lane.webp",
+        "alt": "Narrow Kyoto lane with wet pavement and wooden buildings.",
+        "title": "Kyoto",
+        "location": "Kyoto",
+        "locationId": "kyoto-streets",
+        "coordinates": [
+          35.005,
+          135.77
+        ],
+        "description": "The wet paving reflects just enough light to lead me down the narrow lane.\nThe darker buildings on both sides make that strip of street stand out.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/new-27-osaka-nakatsu-train.webp",
+        "alt": "Train and steel bridge seen through a window near Nakatsu, Osaka.",
+        "title": "Nakatsu, Osaka",
+        "location": "Nakatsu, Osaka",
+        "locationId": "nakatsu-osaka",
+        "coordinates": [
+          34.709,
+          135.498
+        ],
+        "description": "The window gives this a passing-through feeling.\nI kept the bridge structure in the frame so the train has a strong set of lines around it.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/new-28-kyoto-kiyomizu-shop.webp",
+        "alt": "Maneki-neko figures and flowers at a Kyoto shopfront.",
+        "title": "Kiyomizu, Kyoto",
+        "location": "Kiyomizu, Kyoto",
+        "locationId": "kiyomizu-kyoto",
+        "coordinates": [
+          34.996,
+          135.782
+        ],
+        "description": "I moved close enough to make the little cats the focus, but kept the flowers around them.\nThe different sizes make the display feel playful.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/new-31-kiyomizu-terrace.webp",
+        "alt": "Kiyomizu-dera wooden terrace above autumn trees.",
+        "title": "Kiyomizu-dera, Kyoto",
+        "location": "Kiyomizu-dera, Kyoto",
+        "locationId": "kiyomizu-dera-kyoto",
+        "coordinates": [
+          34.995,
+          135.785
+        ],
+        "description": "The terrace cuts across the autumn trees and gives the scene a clear horizontal line.\nI left the city in the distance to show how high the temple sits.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/new-46-nagoya-shinsakaemachi.webp",
+        "alt": "Buildings and traffic light at a Nagoya intersection.",
+        "title": "Shinsakaemachi, Nagoya",
+        "location": "Shinsakaemachi, Nagoya",
+        "locationId": "shinsakaemachi-nagoya",
+        "coordinates": [
+          35.171,
+          136.92
+        ],
+        "description": "I looked upward so the traffic light and building edges cross against the sky.\nThe angled lines make an ordinary intersection feel more lively.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/new-47-nagoya-castle.webp",
+        "alt": "Nagoya Castle under blue sky with visitors on the approach.",
+        "title": "Nagoya Castle",
+        "location": "Nagoya Castle",
+        "locationId": "nagoya-castle",
+        "coordinates": [
+          35.1856,
+          136.899
+        ],
+        "description": "I kept the people on the approach to show the scale of the castle.\nThe blue sky gives its layered roofline a clean outline.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/new-48-shin-osaka-station.webp",
+        "alt": "Station map and ticket gates at Shin-Osaka Station.",
+        "title": "Shin-Osaka Station",
+        "location": "Shin-Osaka Station",
+        "locationId": "shin-osaka-station",
+        "coordinates": [
+          34.7334,
+          135.5001
+        ],
+        "description": "I included the gates below the sign so this feels like an actual journey through the station.\nThe straight lines and bright lighting give it a very different rhythm from the outdoor photos.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/new-49-kyoto-yasaka-pagoda.webp",
+        "alt": "Yasaka Pagoda framed by a Kyoto lane and pedestrians.",
+        "title": "Yasaka Pagoda, Kyoto",
+        "location": "Yasaka Pagoda, Kyoto",
+        "locationId": "yasaka-pagoda-kyoto",
+        "coordinates": [
+          34.9986,
+          135.7793
+        ],
+        "description": "The lane naturally points toward the pagoda.\nI kept the people and shopfronts in view because they make the old tower feel part of a living street.",
+        "sample": false
+      },
+      {
+        "src": "images/travel/japan/new-50-kyoto-window-view.webp",
+        "alt": "Kyoto street viewed from an upper-floor window in warm light.",
+        "title": "Kyoto",
+        "location": "Kyoto",
+        "locationId": "kyoto-streets",
+        "coordinates": [
+          35.005,
+          135.77
+        ],
+        "description": "I photographed from above so the rail and street make different layers.\nThe warm light on the buildings gives the view a softer edge.",
         "sample": false
       }
     ]
